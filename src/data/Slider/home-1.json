@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Yeşilpınar Evleri",
+    "bg": "yesilpinarevler/9.jpg",
+    "btnText": "Learn More",
+    "btnLink": "/about"
+  },
+  {
+    "id": 1,
+    "title": "Nidapark",
+    "bg": "nidapark/1.jpg",
+    "btnText": "Learn More",
+    "btnLink": "/about"
+  }
+]

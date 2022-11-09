@@ -1,0 +1,35 @@
+/*==========================
+02. Color CSS
+============================*/
+// Background Colors
+.bg {
+  &-white {
+    background-color: $white;
+  }
+
+  &-primary {
+    background-color: rgb(0, 69, 72);
+  }
+  &-b-opacity {
+    background-color: rgba($color: #000000, $alpha: 0.35);
+  }
+
+  &-offwhite {
+    background-color: $offWhite;
+  }
+
+  &-brand {
+    background-color: $brandColor;
+  }
+
+  &-blackSoft {
+    background-color: $blackSoft;
+  }
+}
+
+// Text Colors
+.text {
+  &-brand {
+    color: $brandColor;
+  }
+}
