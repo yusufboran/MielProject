@@ -41,7 +41,8 @@
     margin-top: 40px;
 
     .member-info {
-      background-color: transparent;
+      background-color: "#151515";
+      border-radius: 6px;
       padding: 0;
       position: absolute;
       top: -15px;
@@ -55,7 +56,7 @@
       }
 
       &:after{
-        background-image: url('../../img/team/team-arrow.png');
+        background-image: url('../../img/team/arrow.png');
         background-repeat: no-repeat;
         background-position: center center;
         content: '';

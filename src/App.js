@@ -15,7 +15,7 @@ import i18next from "i18next";
 
 const App = () => {
   React.useEffect(() => {
-    i18next.changeLanguage("en");
+    i18next.changeLanguage("tr");
   }, []);
   return (
     <Router>

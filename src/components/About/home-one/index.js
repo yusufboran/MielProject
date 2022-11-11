@@ -1,36 +1,25 @@
-import React, {useState} from 'react';
-import {Link} from "react-router-dom";
+import React from "react";
 import parse from "html-react-parser";
-import Thumbnail from "../../UI/Thumbnail";
-import Content from "../../UI/Content";
+import { useTranslation } from "react-i18next";
 
-import aboutData from '../../../data/About/home-one'
-
-const About = ({content,imgUrl}) => {
-
-    const [about] = useState(aboutData);
-
-    return (
-        <div className="about-area-wrapper sm-top">
-            <div className="container">
-                <div className="row align-items-lg-center">
-                    <div className="col-md-6 col-lg-5">
-                        <Thumbnail classes="about-thumb" imgSrc={imgUrl}/>
-                    </div>
-
-                    <div className="col-md-6 col-lg-7">
-                        <Content classes="about-content">
-                            <h6>{about.title}</h6>
-                            <p>{parse(content)}</p>
-                            <Link to={`${process.env.PUBLIC_URL + about.btnLink}`}
-                                  className="btn-about">{about.btnText} <i
-                                className="fa fa-angle-double-right"/></Link>
-                        </Content>
-                    </div>
-                </div>
+const About = ({ content, imgUrl }) => {
+  const { t } = useTranslation();
+  return (
+    <div
+      className="home-two-about-area"
+      style={{ backgroundImage: `url(${imgUrl})` }}
+    >
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-6">
+            <div className="about-content about-content--2 bg-red">
+              <p>{parse(t(content))}</p>
             </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default About;

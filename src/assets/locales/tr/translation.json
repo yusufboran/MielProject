@@ -7,5 +7,25 @@
   "contact": "İletişim",
   "go_back_home":"Anasayfa'ya Dön",
   "loginBtn": "Giriş yap",
-  "login": "Giriş Ekranı"
+  "login": "Giriş Ekranı",
+  "copyright":"© 2022 Telif hakkı MielProje'ye aittir. Tüm hakları Saklıdır.",
+  "call_to_action_text": "<b>MielProje</b> siz ve sevdikleriniz için en iyi yaşanabilir koşulları sunuyoruz.",
+  "contact_us":"Bize Ulaşın",
+  "get_started_today":"Bu gün başlayacağım",
+  "about_context":"<b>İstanbul</b> bin altı yüz yıl boyunca, 330'dan 1922'ye kadar bulunan dönemde; 4 farklı imparatorluğa başkentlik yapmış , şiirlere konu olmuş bir şehir.<br> Pek çok kültüre ev sahipliği yapan , tarihi , sanatı , geçmişi kalbinde taşıyan bu şehir aynı zamanda dünyanın en büyük metropollerinden biri. <br> Miel Proje Pazarlama ,bu eşsiz şehrin kalbinde , gerçek İstanbul’u yaşayabileceğiniz lokasyonlarda sizleri doğru yatırımlarla buluşturuyor. <br> Sürekli yenilenen  sektörümüzdeki inovatif çözümleri tecrübesi ile bir araya getirerek , bağımsız çözümlerle müşterilerinin ve işbirlikçileri ile güçlü ve güvenilir bir partner olmayı amaç edinen Miel Proje Pazarlama , müşteri memnuniyetini arttırmak, ekonomik çözümler sunmak, alıcısını doğru yatırım ile gerçek fiyatlarda buluşturmak misyonu ile yola çıkıyor.",
+  "project_heading": "İstanbul için geliştirdiğimiz en güzel projeler",
+  "learn_more":"Detaylı Bilgi",
+
+  "feature1_title": "Uzman Danışmanlar",
+  "feature1_text": "Uzman danışmanlarımız ile ihtiyacınıza uygun hedeflediğiniz gayrimenkul kolayca sizin olabilir.",
+  "feature2_title": "Hedefli Projeler",
+  "feature2_text": "Her projede olmak yerine değerli ve geleceği olan projeleri portföyümüze katarak, hem alırken hem de sonrasında kazanmanızı garanti ediyoruz.",
+  "feature3_title": "Satış Sonrası Destek",
+  "feature3_text": "Satış sırasında ve sonrasında da hep yanınızda ve desteğe hazırız.",
+
+  "team" : "Ekibimiz",
+  "team_title" : "Harika bir <br />yaratıcı ekibimiz var",
+  "team_text" : "<strong>MielProje</strong>, Müşterilerin İşlerini keskin ve sorunsuz bir şekilde büyütmeleri için her zaman en iyi İş Çözümlerini sağlamaya çalışır."
+
+
 }

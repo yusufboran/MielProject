@@ -3,7 +3,6 @@ import SectionTitle from "../UI/SectionTitle";
 import ProjectItem from "./ProjectItem";
 import ProjectData from "../../data/Projects/projects.json";
 
-
 function Services({ classes }) {
   return (
     <div className={`service-area-wrapper ${classes}`}>
@@ -18,8 +17,8 @@ function Services({ classes }) {
             <div className="col-lg-6 col-xl-5 m-auto text-center">
               <SectionTitle
                 variant="light"
-                title="Projects"
-                heading="The most beautiful projects we have developed for Istanbul"
+                title="projects"
+                heading="project_heading"
               />
             </div>
           </div>

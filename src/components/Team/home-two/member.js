@@ -1,23 +1,25 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-
-const TeamMember = ({id,profilePic,name,designation}) => {
-    const teamMemberURl = `/team-member/${name.split(' ').join('-').toLocaleLowerCase()}?id=${id}`;
+import React from "react";
+const TeamMember = ({ name, phoneNumber, profilePic }) => {
+  
+  function phoneFormat(phone) {
     return (
-        <div className="col-sm-6 col-lg-3">
-            <div className="team-mem-item team-mem-item--2">
-                <figure className="member-pic">
-                    <Link to={`${process.env.PUBLIC_URL + teamMemberURl}`}>
-                        <img src={require('../../../assets/img/' + profilePic)} alt={name}/>
-                    </Link>
-                </figure>
-                <div className="member-info">
-                    <h5><Link to={`${process.env.PUBLIC_URL + teamMemberURl}`}>{name}</Link></h5>
-                    <span className="designation">{designation}</span>
-                </div>
-            </div>
-        </div>
+      phone.substr(0, 4) + " " + phone.substr(4, 3) + " " + phone.substr(7, 4)
     );
+  }
+
+  return (
+    <div className="col-sm-6 col-lg-3">
+      <div className="team-mem-item team-mem-item--2">
+        <figure className="member-pic">
+          <img src={profilePic} alt={name} />
+        </figure>
+        <div className="member-info">
+          <h5>{name}</h5>
+          <span className="designation">{phoneFormat(phoneNumber)}</span>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default TeamMember;

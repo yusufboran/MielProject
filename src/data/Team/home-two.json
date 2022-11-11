@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "name": "Lucy Farnando",
-    "designation": "CEO & Founder",
-    "profilePic": "team/h-2-01.png"
+    "name": "Wassim Aboushala",
+    "phoneNumber": "05395982888",
+    "profilePic": "https://businex.jamstacktemplates.dev/static/media/h-2-01.b1549d14.png"
   },
   {
     "id": 2,
-    "name": "James Anderson",
-    "designation": "HR & Admin",
-    "profilePic": "team/h-2-02.png"
+    "name": "Ezgi Tezsezer",
+    "phoneNumber": "05427983588",
+    "profilePic": "https://businex.jamstacktemplates.dev/static/media/h-2-02.e5a73e01.png"
   },
   {
     "id": 3,
-    "name": "Thomas Nancy",
-    "designation": "Software Engineer",
-    "profilePic": "team/h-2-03.png"
+    "name": "Jwan Hormany",
+    "phoneNumber": "05373137612",
+    "profilePic": "https://businex.jamstacktemplates.dev/static/media/h-2-03.869544a3.png"
   },
   {
     "id": 4,
-    "name": "Nail Mathue",
-    "designation": "Creative Designer",
-    "profilePic": "team/h-2-04.png"
+    "name": "Seda Kıymaz",
+    "phoneNumber": "05321769287",
+    "profilePic": "https://businex.jamstacktemplates.dev/static/media/h-2-04.242dad24.png"
   }
 ]

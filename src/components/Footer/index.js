@@ -8,6 +8,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { useTranslation } from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
   rootBox: {
@@ -40,11 +41,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Footer(props) {
+  const { t } = useTranslation();
+
   const classes = useStyles();
 
   const content = {
     brand: { image: "nereus-assets/img/nereus-light.png", width: 110 },
-    copy: "© 2020 Nereus All rights reserved.",
+    copy: "© 2022 Copyright by MielProje. All Rights Reserved.",
     link1: "First Link",
     link2: "Second Link",
     link3: "Third Link",
@@ -115,7 +118,7 @@ export default function Footer(props) {
             variant="caption"
             gutterBottom={false}
           >
-            {content["copy"]}
+            {t("copyright")}
           </Typography>
         </Box>
       </Container>

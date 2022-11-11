@@ -6,6 +6,7 @@ function ProjectItem(props) {
     .split(" ")
     .join("-")
     .toLowerCase()}?id=${props.id}`;
+
   return (
     <div className="col-sm-6 col-lg-4">
       <div className="service-item">

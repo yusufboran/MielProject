@@ -1,31 +1,22 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
 import supercluster from "points-cluster";
-
 import Marker from "../Marker";
 import ClusterMarker from "../ClusterMarker/index";
-
 import mapStyles from "./mapStyles";
-import { markersData, susolvkaCoords } from "../fakeData";
+import { markersData } from "../fakeData";
 
-const MAP = {
-  defaultZoom: 10,
+const mapCenter = { lat: 41.0317770592092, lng: 28.99349299788066 };
 
-  defaultCenter: susolvkaCoords,
-  options: {
-    fullscreenControl: false,
-    styles: mapStyles,
-    maxZoom: 19,
-  },
+const mapOptions = {
+  fullscreenControl: false,
+  styles: mapStyles,
+  maxZoom: 19,
 };
 
 export class GoogleMap extends React.PureComponent {
   // eslint-disable-line react/prefer-stateless-function
   state = {
-    mapOptions: {
-      center: MAP.defaultCenter,
-      zoom: MAP.defaultZoom,
-    },
     clusters: [],
   };
 
@@ -72,9 +63,9 @@ export class GoogleMap extends React.PureComponent {
     return (
       <div style={{ width: "100%", height: "88vh" }}>
         <GoogleMapReact
-          defaultZoom={MAP.defaultZoom}
-          defaultCenter={MAP.defaultCenter}
-          options={MAP.options}
+          defaultZoom={10}
+          defaultCenter={mapCenter}
+          options={mapOptions}
           onChange={this.handleMapChange}
           yesIWantToUseGoogleMapApiInternals
           bootstrapURLKeys={{ key: "AIzaSyCICTNwA7DuGhVVvJLLWAVQdygh8ipdRVA" }}

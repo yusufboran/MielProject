@@ -3,14 +3,14 @@
     "id": 1,
     "title": "Yeşilpınar Evleri",
     "bg": "yesilpinarevler/9.jpg",
-    "btnText": "Learn More",
+    "btnText": "learn_more",
     "btnLink": "/about"
   },
   {
     "id": 1,
     "title": "Nidapark",
     "bg": "nidapark/1.jpg",
-    "btnText": "Learn More",
+    "btnText": "learn_more",
     "btnLink": "/about"
   }
 ]

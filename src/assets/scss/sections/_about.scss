@@ -3,67 +3,22 @@
 ==========================*/
 
 .about-content {
-  @media #{$xl-device} {
-    margin-left: 55px;
-    padding-right: 80px;
-  }
-
-  h6 {
-    margin-bottom: 13px;
-  }
-
   .about-since {
-    color: #484848;
-    display: inline-block;
     font-size: 24px;
-    font-weight: 300;
     line-height: 1;
-    position: relative;
-    padding-right: 20px;
-    margin-bottom: 30px;
 
     @media #{$sm-device} {
       margin-bottom: 20px;
+      font-size: 12px;
     }
 
-    &:after {
-      background-color: #b4b4b4;
-      content: '';
-      position: absolute;
-      left: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 2px;
-      width: 110px;
+    @media #{$xxs-device} {
+      margin-bottom: 20px;
+      font-size: 8px;
     }
   }
 
-  .btn-about {
-    color: $paragraph;
-    font-size: 16px;
-    font-weight: 500;
-    display: inline-block;
-    margin-top: 15px;
-
-    @media #{$sm-device} {
-      margin-top: 5px;
-    }
-
-    i {
-      font-size: 20px;
-      line-height: 3px;
-      vertical-align: middle;
-      transition: 0.3s;
-    }
-
-    &:hover {
-      i {
-        padding-left: 5px;
-      }
-    }
-  }
-
-  &--2{
+  &--2 {
     @media #{$xl-device} {
       margin-left: 0;
       padding-right: 40px;
@@ -83,14 +38,13 @@
     transition: 0.4s;
   }
 
-  &--2{
+  &--2 {
     margin-right: -250px;
   }
 }
 
-
 // Home 2 About Style
-.home-two-about-area{
+.home-two-about-area {
   background-color: $offWhite;
   //background-image: url('../img/about-2-bg.jpg');
   background-position: center right;
@@ -104,7 +58,7 @@
     background-image: none !important;
   }
 
-  .about-content{
+  .about-content {
     padding-top: 100px;
     padding-bottom: 110px;
 
@@ -120,11 +74,11 @@
   }
 }
 
-.video-button-thumb{
+.video-button-thumb {
   position: relative;
 
-  &:after{
-    content: '';
+  &:after {
+    content: "";
     background-color: $brandColor;
     opacity: 0.5;
     height: 100%;
@@ -134,7 +88,7 @@
     top: 0;
   }
 
-  .btn-play{
+  .btn-play {
     border-radius: 50%;
     background-color: $white;
     color: $brandColor;
@@ -146,15 +100,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 2;
 
-    &:hover{
+    &:hover {
       background-color: $brandColor;
       color: $white;
     }
 
-    i{
+    i {
       padding-left: 5px;
     }
   }

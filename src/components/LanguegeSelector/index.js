@@ -2,7 +2,7 @@ import React from "react";
 import i18next from "i18next";
 
 const LanguageSelect = () => {
-  let [language, setLanguage] = React.useState("tr");
+  let [language, setLanguage] = React.useState("en");
   function languageChange() {
     language === "en"
       ? i18next.changeLanguage("en")

@@ -3,7 +3,7 @@ import PageWrapper from "../../components/PageWrapper";
 import ServiceContentWrap from "./ServiceContentWrap";
 import RelatedServices from "../../components/RelatedServices";
 import ProjectData from "../../data/Projects/projects.json";
-import Slider from "../Slider/home-one";
+import Slider from "../Slider";
 
 const ServiceDetails = () => {
   const serviceID = new URLSearchParams(window.location.search).get("id");

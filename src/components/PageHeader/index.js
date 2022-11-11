@@ -10,8 +10,7 @@ const PageHeader = ({ bgImg, title, content }) => {
         <div className="row">
           <div className="col-lg-10 col-xl-8 m-auto">
             <div className="page-header-content-inner">
-              <div className="page-header-content bg-b-opacity text-center p-4 ">
-                <h2>{title}</h2>
+              <div className="about-content bg-b-opacity text-center p-4">
                 <span className="about-since">{parse(content)}</span>
               </div>
             </div>

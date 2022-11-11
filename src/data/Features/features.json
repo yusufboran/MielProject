@@ -1,20 +1,20 @@
 [
   {
     "id": 1,
-    "title": "Creative Team",
-    "text": "We have creative team, they always ready to help you.",
+    "title": "Uzman Danışmanlar",
+    "text": "Uzman danışmanlarımız ile ihtiyacınıza uygun hedeflediğiniz gayrimenkul kolayca sizin olabilir.",
     "imgSrc": "feature/01.png"
   },
   {
     "id": 2,
-    "title": "Best Service",
-    "text": "We have creative team, they always ready to help you.",
+    "title": "Hedefli Projeler",
+    "text": "Her projede olmak yerine değerli ve geleceği olan projeleri portföyümüze katarak, hem alırken hem de sonrasında kazanmanızı garanti ediyoruz.",
     "imgSrc": "feature/02.png"
   },
   {
     "id": 3,
-    "title": "Online Support",
-    "text": "We have creative team, they always ready to help you.",
+    "title": "Satış Sonrası Destek",
+    "text": "Satış sırasında ve sonrasında da hep yanınızda ve desteğe hazırız.",
     "imgSrc": "feature/03.png"
   }
 ]
