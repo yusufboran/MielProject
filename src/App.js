@@ -10,7 +10,6 @@ import Login from "./pages/Login";
 import Admin from "./pages/Admin/index";
 import ProjectsPage from "./pages/Projects";
 import ServiceDetails from "./pages/ProjectDetails";
-import PdfView from "./components/PdfView";
 import i18next from "i18next";
 
 const App = () => {
@@ -35,11 +34,6 @@ const App = () => {
             exact
             path={`${process.env.PUBLIC_URL + "/about"}`}
             component={About}
-          />
-          <Route
-            exact
-            path={`${process.env.PUBLIC_URL + "/pdf"}`}
-            component={PdfView}
           />
 
           <Route

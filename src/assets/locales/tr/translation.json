@@ -25,7 +25,19 @@
 
   "team" : "Ekibimiz",
   "team_title" : "Harika bir <br />yaratıcı ekibimiz var",
-  "team_text" : "<strong>MielProje</strong>, Müşterilerin İşlerini keskin ve sorunsuz bir şekilde büyütmeleri için her zaman en iyi İş Çözümlerini sağlamaya çalışır."
+  "team_text" : "<strong>MielProje</strong>, Müşterilerin İşlerini keskin ve sorunsuz bir şekilde büyütmeleri için her zaman en iyi İş Çözümlerini sağlamaya çalışır.",
+
+  "contact_Info": "İletişim Bilgileri",
+
+  "Send us a Message" : "Bize mesaj gönder",
+  "First Name":"Ad",
+  "Last Name":"Soyad",
+  "Email address": "E-mail adresi",
+  "Phone No":"Telefon Numarası",
+  "Write Your Message":"Mesajınızı Yazın",
+  "Send Message":"Gönder"
+
+
 
 
 }

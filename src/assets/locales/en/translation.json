@@ -25,7 +25,19 @@
 
     "team" : "Creative Team",
     "team_title" : "We have great <br />creative team",
-    "team_text" : "<strong>MielProje</strong> always try to provide the best Business Solutions for Clients to grow up their Business sharp and smoothly."
+    "team_text" : "<strong>MielProje</strong> always try to provide the best Business Solutions for Clients to grow up their Business sharp and smoothly.",
+
+
+    "contact_Info": "Contact Info",
+    "Send us a Message" : "Send us a Message",
+    "First Name":"First Name",
+    "Last Name":"Last Name",
+    "Email address": "Email address",
+    "Phone No":"Phone No",
+    "Write Your Message":"Write Your Message",
+    "Send Message":"Send Message"
+
+    
 
     
   
