@@ -2,21 +2,24 @@
   {
     "id": 1,
     "counterNumber": 2654,
-    "counterText": "Teslim edilen ev"
+    "counterText": "delivered house"
   },
-  {
-    "id": 2,
-    "counterNumber": 152,
-    "counterText": "Proje"
-  },
+ 
   {
     "id": 3,
-    "counterNumber": 24,
-    "counterText": "Ofis"
+    "counterNumber": 2,
+    "counterText": "office"
   },
   {
     "id": 4,
     "counterNumber": 267,
-    "counterText": "Çalışan"
+    "counterText": "worker"
+  },
+  {
+    "id": 2,
+    "counterNumber": 22,
+    "counterText": "project"
   }
 ]
+
+  

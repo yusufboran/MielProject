@@ -3,5 +3,10 @@
     "id": 1,
     "networkName": "instagram",
     "username": "mielprojepazarlama"
+  },
+  {
+    "id": 2,
+    "networkName": "linkedin",
+    "username": "/"
   }
 ]

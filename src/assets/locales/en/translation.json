@@ -11,7 +11,7 @@
     "copyright":"© 2022 Copyright by MielProje. All Rights Reserved.",
     "call_to_action_text": "<b>MielProje</b> we offer the best livable conditions for you and your loved ones.",
     "contact_us":"Contact Us",
-    "get_started_today":"Get Started Today",
+    "For more information":"For more information",
     "about_context":"<b>Istanbul</b> for one thousand six hundred years, from 330 to 1922; It is a city that has been the capital of 4 different empires and has been the subject of poems.<br> This city, which hosts many cultures and carries history, art and history in its heart, is also one of the largest metropolises in the world. <br> Miel Proje Pazarlama brings you together with the right investments in the heart of this unique city, in locations where you can experience the real Istanbul. <br> Miel Proje Pazarlama, which aims to be a strong and reliable partner with its customers and collaborators with independent solutions by bringing together innovative solutions in our constantly renewed sector with its experience, set out with the mission of increasing customer satisfaction, providing economical solutions, and bringing the buyers together at real prices with the right investment. coming out.",
     "project_heading": "The most beautiful projects we have developed for Istanbul",
     "learn_more":"Learn More",
@@ -35,9 +35,13 @@
     "Email address": "Email address",
     "Phone No":"Phone No",
     "Write Your Message":"Write Your Message",
-    "Send Message":"Send Message"
+    "Send Message":"Send Message",
 
     
+    "delivered house" : "Delivered house",
+    "office" : "Office",
+    "worker":"Worker",
+    "project":"Project"  
 
     
   

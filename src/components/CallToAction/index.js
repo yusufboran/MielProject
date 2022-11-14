@@ -11,7 +11,7 @@ function CallToAction() {
         <div className="footer-top-content">
           <div className="row align-items-center">
             <div className="col-md-8 col-lg-6">
-              <h2> {t("get_started_today")}</h2>
+              <h2> {t("For more information")}</h2>
               <p>{parse(t("call_to_action_text"))}</p>
             </div>
             <div className="col-md-4 col-lg-6 text-md-right mt-sm-25">
