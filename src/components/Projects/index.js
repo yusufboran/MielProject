@@ -28,13 +28,14 @@ function Services({ classes }) {
       <div className="service-content-area">
         <div className="container">
           <div className="row mtn-30">
-            {ProjectData.map((service) => (
+            {ProjectData.map((project) => (
               <ProjectItem
-                key={service.id}
-                id={service.id}
-                title={service.title}
-                text={service.shortDesc}
-                thumb={service.thumb}
+                key={project.id}
+                id={project.id}
+                title={project.title}
+                text={project.shortDesc}
+                thumb={project.thumb}
+                promotional_text={project.promotional_text}
               />
             ))}
           </div>

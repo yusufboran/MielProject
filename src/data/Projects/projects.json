@@ -4,6 +4,7 @@
     "title": "Nidapark",
     "shortDesc": "Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing elit. Asdipiscing elit. Consectetur adipisicing hastech.",
     "thumb": "project/nidapark/3.JPG",
+    "promotional_text": [ "Metroya doğrudan bağlantı", "Bostancı İskelesi","Sahil ve Çevre yolu","Havalimanına 25 dakika"],
     "image":[
       {
         "id": 1,
@@ -48,6 +49,8 @@
     "title": "Yeşilpınar Evleri",
     "shortDesc": "Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing elit. Asdipiscing elit. Consectetur adipisicing hastech.",
     "thumb": "project/yesilpinarevler/2.jpg",
+    "promotional_text": [ "TAKSİM’E 10 DAKİKA","YENİ HAVALİMANI’NA 32 KM","PIERRE LOTI 2 KM","AVRASYA TÜNELİ’NE 25 KM"],
+
     "image":[
       {
         "id": 1,

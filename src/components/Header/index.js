@@ -8,7 +8,7 @@ const Header = () => {
 
   const sticky = () => {
     const scrollTop = window.scrollY;
-    scrollTop >= 200 ? setIsSticky(true) : setIsSticky(false);
+    scrollTop >= 250 ? setIsSticky(true) : setIsSticky(false);
   };
 
   useEffect(() => {

@@ -18,9 +18,10 @@ const HomePage = () => {
 
   return (
     <Fragment>
-      <Header />
+      <Header  />
       <Slider data={SliderData} />
       <About
+        disable={true}
         imgUrl="https://plus.unsplash.com/premium_photo-1661962705507-2c4e47d37282?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80"
         content="about_context"
       />

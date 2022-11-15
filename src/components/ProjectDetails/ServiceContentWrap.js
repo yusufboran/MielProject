@@ -16,7 +16,6 @@ const ServiceContentWrap = ({
   prevService,
   nextService,
 }) => {
-
   return (
     <div className="col-lg-12">
       <PdfView />
@@ -61,57 +60,22 @@ const ServiceContentWrap = ({
             </div>
           </div>
           <div className="download-documents">
-            <Sidebar classes={"col-lg-8 mtn-40"}>
-              <SidebarItem title="Download Brochure">
-                <List classes="service-list">
-                  <LI>
-                    <Anchor path="/">
-                      <i className="fa fa-file-pdf-o" />
-                      Brochures.PDF
-                    </Anchor>
-                  </LI>
-                  <LI>
-                    <Anchor path="/">
-                      <i className="fa fa-file-word-o" />
-                      Brochures.DOC
-                    </Anchor>
-                  </LI>
-                </List>
-              </SidebarItem>
-            </Sidebar>
-          </div>
-
-          <div className="pagination-wrap">
-            <ul className="pagination">
-              <li className="prev">
-                <a
-                  href={`${
-                    process.env.PUBLIC_URL +
-                    `/projects/${prevService.title
-                      .split(" ")
-                      .join("-")
-                      .toLocaleLowerCase()}?id=${prevService.id}`
-                  }`}
-                  className={service.id === 1 ? "disabled" : null}
-                >
-                  <i className="fa fa-long-arrow-left" /> Previous
-                </a>
-              </li>
-              <li className="next">
-                <a
-                  href={`${
-                    process.env.PUBLIC_URL +
-                    `/projects/${nextService.title
-                      .split(" ")
-                      .join("-")
-                      .toLocaleLowerCase()}?id=${nextService.id}`
-                  }`}
-                  className={service.id === totalService ? "disabled" : null}
-                >
-                  Next <i className="fa fa-long-arrow-right" />
-                </a>
-              </li>
-            </ul>
+            <SidebarItem title="Download Brochure">
+              <List classes="service-list">
+                <LI>
+                  <Anchor path="/">
+                    <i className="fa fa-file-pdf-o" />
+                    Brochures.PDF
+                  </Anchor>
+                </LI>
+                <LI>
+                  <Anchor path="/">
+                    <i className="fa fa-file-word-o" />
+                    Brochures.DOC
+                  </Anchor>
+                </LI>
+              </List>
+            </SidebarItem>
           </div>
         </div>
       </div>

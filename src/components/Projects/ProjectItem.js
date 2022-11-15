@@ -24,20 +24,26 @@ function ProjectItem(props) {
         </figure>
         <div className="service-content">
           <div className="service-content-inner">
-            <h5>
-              <Link
-                to={`${process.env.PUBLIC_URL + projectUrl}`}
-                className="stretched-link"
-              >
-                {props.title}
-              </Link>
-            </h5>
-            <p>{props.text + "asdasd"}</p>
+            <ul>
+              {props.promotional_text.map((item) => {
+                return <li>{titleCase(item)}</li>;
+              })}
+            </ul>
           </div>
         </div>
       </div>
     </div>
   );
+}
+
+
+function titleCase(str) {
+  var splitStr = str.toLowerCase().split(" ");
+  for (var i = 0; i < splitStr.length; i++) {
+    splitStr[i] =
+      splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+  }
+  return splitStr.join(" ");
 }
 
 export default ProjectItem;

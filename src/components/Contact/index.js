@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const ContactPage = () => {
   const { t } = useTranslation();
   return (
-    <div className={"contact-page-area-wrapper p-4" }>
+    <div className={"contact-page-area-wrapper sp-y"}>
       <div className="container">
         <div className="contact-content-wrap">
           <div className="row">
