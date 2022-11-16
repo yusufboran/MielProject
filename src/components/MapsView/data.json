@@ -1,0 +1,32 @@
+{
+    "type": "FeatureCollection",
+    "crs": {
+      "type": "name",
+      "properties": { "name": "Event Data: EDM Night Toronto" }
+    },
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "NAME": "Skyland İstanbul",
+          "ADRESS": "Huzur Mh., Azerbaycan Cd. No:4, 34415 Sarıyer/İstanbul",
+          "DATE": "27th January 2020",
+          "LOCATION": "Yonge-Dundas Square Toronto",
+          "HOURS": "6PM-10PM",
+          "ACCESS_TYPES": "STAFF and ARTISTS ONLY",
+          "ZONE_TYPE": "IN",
+          "ENTRACE_CONNCTED":true,
+          "NEAREST_ENTRANCE": "1",
+          "BAR": true,
+          "FOOD": true,
+          "LANES": 10,
+          "DESCRIPTIO": "This area is only for Staff and Artists"
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [ 41.1025756775074, 28.985158497584422]
+        }
+      }
+  
+    ]
+  }

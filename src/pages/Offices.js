@@ -3,10 +3,9 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 import LoginRegister from "../components/LoginRegister";
-import GoogleMap from "../components/MapsView/GoogleMap";
+import MapView from "../components/MapsView";
 
 const OfficesPage = () => {
-
   React.useEffect(() => {
     document.title = `Offices`;
   });
@@ -14,7 +13,7 @@ const OfficesPage = () => {
   return (
     <Fragment>
       <Header />
-      <GoogleMap />
+      <MapView />
       <Footer />
       <MobileMenu />
       <LoginRegister />
