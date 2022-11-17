@@ -8,6 +8,7 @@ import {
 } from "react-google-maps";
 import markers from "./data.json";
 import mapStyles from "./mapStyles";
+import MarkerInfoBox from "./MarkerInfoBox";
 
 const mapOptions = {
   fullscreenControl: false,
@@ -48,7 +49,7 @@ function Map() {
       defaultCenter={{ lat: 41.06018769153425, lng: 29.04100341843807 }}
       mapContainerStyle={{ width: "100vw", height: "100vh" }}
     >
-      {markers.map(({ id, name, position }) => (
+      {markers.map(({ id, position ,info}) => (
         <Marker
           key={id}
           position={position}
@@ -59,8 +60,18 @@ function Map() {
           }}
         >
           {activeMarker === id ? (
-            <InfoWindow onCloseClick={() => setActiveMarker(null)}>
-              <div>{name}</div>
+            <InfoWindow
+              style={{
+                backgroundColor: "white",
+                borderRadius: "8px",
+                boxShadow: "0 2px 7px 1px rgba(0,0,0,0.3)",
+                fontSize: "13px",
+                fontWeight: "300",
+                padding: "12px",
+              }}
+              onCloseClick={() => setActiveMarker(null)}
+            >
+              <MarkerInfoBox info={info} />
             </InfoWindow>
           ) : null}
         </Marker>
@@ -71,7 +82,7 @@ function Map() {
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 export default function Main() {
-  const api = "AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA";
+  const api = "AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA"; //google developer api key AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA
   return (
     <div style={{ width: "100%", height: "88vh" }}>
       <MapWrapped

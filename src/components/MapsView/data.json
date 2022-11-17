@@ -1,20 +1,16 @@
-[{
+[
+  {
   "id": 1,
   "name": "istanbul",
-  "position": { "lat":41.0981053002918,  "lng": 28.929102540082233 }
-},
-{
-  "id": 2,
-  "name": "Denver, Colorado",
-  "position": { "lat": 39.739235, "lng": -104.99025 }
-},
-{
-  "id": 3,
-  "name": "Los Angeles, California",
-  "position": { "lat": 34.052235, "lng": -118.243683 }
-},
-{
-  "id": 4,
-  "name": "New York, New York",
-  "position": { "lat": 40.712776, "lng": -74.005974 }
-}]
+  "position": { "lat":41.1025676958411,  "lng": 28.985145230732222 },
+  "info":{
+    "id": 1,
+    "title": "Skyland İstanbul",
+    "phone": "+012354 658 987",
+    "address":
+      "Huzur Mahallesi Azarbeycan Caddesi Skyland Office B blok Kat:13 no:201",
+    "profilePic":
+      "https://www.propertyturkeyistanbul.com/wp-content/uploads/2021/12/SKYLAND-ISTANBUL-propertyturkeyistanbul-39.jpg"
+  }
+}
+]

@@ -6,6 +6,8 @@
   transition: 0.4s;
 
   .member-info {
+    max-width: 200px;
+    max-height: 200px;
     text-align: center;
     background-color: $white;
     padding: 15px 10px;
@@ -33,6 +35,8 @@
   .member-pic {
     img {
       width: 100%;
+      max-width: 200px;
+      max-height: 200px;
     }
   }
 
@@ -175,11 +179,8 @@
 // Team Page
 .team-page-area-wrapper{
   .team-mem-item{
-    margin-top: 30px;
-    transition: 0.4s;
+    max-width: 200px;
+    max-height: 200px;
 
-    &:hover{
-      transform: translateY(-10px);
-    }
   }
 }
