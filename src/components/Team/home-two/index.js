@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionTitle from "../../UI/SectionTitle";
 
-import teamData from '../../../data/Team/home-two'
+import teamData from '../../../data/Team/team'
 import TeamMember from "./member";
 
 const Team = () => {

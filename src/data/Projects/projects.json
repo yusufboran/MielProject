@@ -2,32 +2,87 @@
   {
     "id": 1,
     "title": "Nidapark",
-    "shortDesc": "Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing elit. Asdipiscing elit. Consectetur adipisicing hastech.",
+    "shortDesc":   "TAKSİM’E 10 DAKİKA<br> YENİ HAVALİMANI’NA 32 KM<br> PIERRE LOTI 2 KM<br> AVRASYA TÜNELİ’NE 25 KM",
+
     "thumb": "project/nidapark/3.JPG",
-    "promotional_text": [ "Metroya doğrudan bağlantı", "Bostancı İskelesi","Sahil ve Çevre yolu","Havalimanına 25 dakika"],
     "image":[
       {
         "id": 1,
-        "bg":  "nidapark/1.jpg"
-      },
-      {
-        "id": 1,
-        "bg":   "nidapark/3.JPG"
-      },
-      {
-        "id": 1,
-        "title": "Nidapark",
-        "bg":    "nidapark/4.JPG",
+        "title": "Yeşilpınar Evleri",
+        "bg":  "yesilpinarevler/1.jpg",
         "btnText": "Learn More",
         "btnLink": "/about"
       },
       {
         "id": 1,
         "title": "Nidapark",
-        "bg":   "nidapark/5.JPG",
+        "bg":   "yesilpinarevler/2.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      },
+      {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/3.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      },
+      {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/4.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      },
+      {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/5.jpg",
         "btnText": "Learn More",
         "btnLink": "/about"
       }
+      ,
+      {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/6.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      },
+      {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/7.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      }, {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/8.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      }
+      , {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/9.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      },
+      {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/10.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      }, {
+        "id": 1,
+        "title": "Nidapark",
+        "bg":   "yesilpinarevler/11.jpg",
+        "btnText": "Learn More",
+        "btnLink": "/about"
+      }
+
     ],
     "previewImages": [
       "project/nidapark/1.jpg",
@@ -47,10 +102,8 @@
   {
     "id": 2,
     "title": "Yeşilpınar Evleri",
-    "shortDesc": "Lorem ipsum dolor sit amet, consect etur adipiscing elit consectetur adipisicing elit. Asdipiscing elit. Consectetur adipisicing hastech.",
+    "shortDesc": "Metroya doğrudan bağlantı<br> Bostancı İskelesi<br> Sahil ve Çevre yolu<br> Havalimanına 25 dakika",
     "thumb": "project/yesilpinarevler/2.jpg",
-    "promotional_text": [ "TAKSİM’E 10 DAKİKA","YENİ HAVALİMANI’NA 32 KM","PIERRE LOTI 2 KM","AVRASYA TÜNELİ’NE 25 KM"],
-
     "image":[
       {
         "id": 1,

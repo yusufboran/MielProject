@@ -6,23 +6,31 @@ import {
   Marker,
   InfoWindow,
 } from "react-google-maps";
-import * as parkData from "./data.json";
+import markers from "./data.json";
 import mapStyles from "./mapStyles";
 
 const mapOptions = {
   fullscreenControl: false,
+  mapTypeControl: false,
   styles: mapStyles,
   maxZoom: 16,
   streetViewControl: false,
 };
 
 function Map() {
-  const [selectedPark, setSelectedPark] = useState(null);
+  const [activeMarker, setActiveMarker] = useState(null);
+
+  const handleActiveMarker = (marker) => {
+    if (marker === activeMarker) {
+      return;
+    }
+    setActiveMarker(marker);
+  };
 
   useEffect(() => {
     const listener = (e) => {
       if (e.key === "Escape") {
-        setSelectedPark(null);
+        setActiveMarker(null);
       }
     };
     window.addEventListener("keydown", listener);
@@ -34,46 +42,29 @@ function Map() {
 
   return (
     <GoogleMap
+      onClick={() => setActiveMarker(null)}
       defaultZoom={10}
       options={mapOptions}
       defaultCenter={{ lat: 41.06018769153425, lng: 29.04100341843807 }}
+      mapContainerStyle={{ width: "100vw", height: "100vh" }}
     >
-      {parkData.features.map((park) => (
+      {markers.map(({ id, name, position }) => (
         <Marker
-          key={park.properties.PARK_ID}
-          position={{
-            lat: park.geometry.coordinates[0],
-            lng: park.geometry.coordinates[1],
-          }}
-          onClick={() => {
-            setSelectedPark(park);
-          }}
+          key={id}
+          position={position}
+          onMouseOver={() => handleActiveMarker(id)}
           icon={{
             url: "https://cdn-icons-png.flaticon.com/512/1599/1599834.png",
             scaledSize: new window.google.maps.Size(60, 60),
           }}
-        />
-      ))}
-
-      {selectedPark && (
-        <InfoWindow
-          onCloseClick={() => {
-            setSelectedPark(null);
-          }}
-          position={{
-            lat: selectedPark.geometry.coordinates[0],
-            lng: selectedPark.geometry.coordinates[1],
-          }}
         >
-          <div
-            style={{
-            }}
-          >
-            <h2>{selectedPark.properties.NAME}</h2>
-            <p>{selectedPark.properties.ADRESS}</p>
-          </div>
-        </InfoWindow>
-      )}
+          {activeMarker === id ? (
+            <InfoWindow onCloseClick={() => setActiveMarker(null)}>
+              <div>{name}</div>
+            </InfoWindow>
+          ) : null}
+        </Marker>
+      ))}
     </GoogleMap>
   );
 }

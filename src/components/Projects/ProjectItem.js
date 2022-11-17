@@ -1,12 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import parse from "html-react-parser";
 
 function ProjectItem(props) {
+  function titleCase(str) {
+    var splitStr = str.toLowerCase().split(" ");
+    for (var i = 0; i < splitStr.length; i++) {
+      splitStr[i] =
+        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    var text = splitStr.join(" ");
+    text = parse(text);
+    return text;
+  }
+
   const projectUrl = `/projects/${props.title
     .split(" ")
     .join("-")
     .toLowerCase()}?id=${props.id}`;
-
   return (
     <div className="col-sm-6 col-lg-4">
       <div className="service-item">
@@ -24,26 +35,12 @@ function ProjectItem(props) {
         </figure>
         <div className="service-content">
           <div className="service-content-inner">
-            <ul>
-              {props.promotional_text.map((item) => {
-                return <li>{titleCase(item)}</li>;
-              })}
-            </ul>
+            <p>{titleCase(props.text)}</p>
           </div>
         </div>
       </div>
     </div>
   );
-}
-
-
-function titleCase(str) {
-  var splitStr = str.toLowerCase().split(" ");
-  for (var i = 0; i < splitStr.length; i++) {
-    splitStr[i] =
-      splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-  }
-  return splitStr.join(" ");
 }
 
 export default ProjectItem;

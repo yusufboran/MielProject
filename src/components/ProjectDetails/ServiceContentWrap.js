@@ -3,9 +3,8 @@ import List from "../UI/List";
 import LI from "../UI/List/Item";
 import IconBox from "../IconBox";
 import Text from "../UI/Text";
-
+import parse from "html-react-parser";
 import HowWeWorksData from "../../data/HowWeWorks/how-we-works";
-import Sidebar from "../Sidebar";
 import SidebarItem from "../Sidebar/SidebarItem";
 import Anchor from "../UI/Anchor";
 
@@ -16,13 +15,24 @@ const ServiceContentWrap = ({
   prevService,
   nextService,
 }) => {
+  function titleCase(str) {
+    var splitStr = str.toLowerCase().split(" ");
+    for (var i = 0; i < splitStr.length; i++) {
+      splitStr[i] =
+        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    var text = splitStr.join(" ");
+    text = parse(text);
+    return text;
+  }
+
   return (
     <div className="col-lg-12">
       <PdfView />
       <div className="service-details-content">
         <div className="service-details-info">
           <h3>{service.title}</h3>
-          <p>{service.shortDesc}</p>
+          <p>{titleCase(service.shortDesc)}</p>
 
           <div className="about-service mt-50 mt-sm-35">
             <h4>About this Service</h4>

@@ -26,6 +26,25 @@
   }
 }
 
+.poem {
+  font-size: 24px;
+  line-height: 1;
+
+  @media #{$sm-device} {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  @media #{$xxs-device} {
+    margin-bottom: 20px;
+    font-size: 10px;
+  }
+  @media #{$min-device} {
+    margin-bottom: 20px;
+    font-size: 7.5px;
+  }
+}
+
 .about-thumb {
   overflow: hidden;
 

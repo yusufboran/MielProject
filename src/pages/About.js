@@ -6,7 +6,6 @@ import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
-import Testimonial from "../components/Testimonials/home-one";
 import Team from "../components/Team/home-two";
 
 const PageAbout = () => {
