@@ -8,7 +8,6 @@ import HowWeWorksData from "../../data/HowWeWorks/how-we-works";
 import SidebarItem from "../Sidebar/SidebarItem";
 import Anchor from "../UI/Anchor";
 
-import PdfView from "../PdfView";
 const ServiceContentWrap = ({
   service,
   totalService,
@@ -28,7 +27,7 @@ const ServiceContentWrap = ({
 
   return (
     <div className="col-lg-12">
-      <PdfView />
+      
       <div className="service-details-content">
         <div className="service-details-info">
           <h3>{service.title}</h3>

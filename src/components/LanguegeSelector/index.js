@@ -10,15 +10,16 @@ const LanguageSelect = () => {
     language === "en" ? setLanguage("tr") : setLanguage("en");
   }
 
- 
-
   return (
-    <p
-      style={{ position: "relative", bottom: 4.2, color: "white"}}
-      onClick={languageChange}
-    >
-      {language.toUpperCase()}
-    </p>
+    <li>
+      <button
+        style={{ position: "relative", bottom: 4.2, color: "white" }}
+        type="button"
+        onClick={languageChange}
+      >
+        {language.toUpperCase()}
+      </button>
+    </li>
   );
 };
 

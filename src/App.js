@@ -1,13 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route, HashRouter } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error404 from "./pages/Error404";
 import ScrollToTop from "./helpers/ScrollToTop";
 import OfficesPage from "./pages/Offices";
-import Login from "./pages/Login";
-import Admin from "./pages/Admin/index";
 import ProjectsPage from "./pages/Projects";
 import ServiceDetails from "./pages/ProjectDetails";
 import i18next from "i18next";
@@ -17,7 +15,7 @@ const App = () => {
     i18next.changeLanguage("tr");
   }, []);
   return (
-    <Router>
+    <HashRouter>
       <ScrollToTop>
         <Switch>
           <Route
@@ -57,21 +55,11 @@ const App = () => {
             path={`${process.env.PUBLIC_URL + "/"}`}
             component={HomePage}
           />
-          <Route
-            exact
-            path={`${process.env.PUBLIC_URL + "/login"}`}
-            component={Login}
-          />
 
-          <Route
-            exact
-            path={`${process.env.PUBLIC_URL + "/admin"}`}
-            component={Admin}
-          />
           <Route path={"*"} component={Error404} />
         </Switch>
       </ScrollToTop>
-    </Router>
+    </HashRouter>
   );
 };
 
