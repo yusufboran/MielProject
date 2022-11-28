@@ -83,7 +83,7 @@ function Map() {
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 export default function Main() {
-  const api = "AIzaSyCICTNwA7DuGhVVvJLLWAVQdygh8ipdRVA"; //google developer api key AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA
+  const api = "AIzaSyAi9t9QLLtA1qArKTK_mE3wSUFSYZxQiok"; //google developer api key AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA
   return (
     <div style={{ width: "100%", height: "88vh" }}>
       <MapWrapped

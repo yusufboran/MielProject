@@ -12,6 +12,7 @@ const ContactPage = () => {
           <div className="row">
             <div className="col-lg-8">
               <div className="contact-form-area contact-method">
+                
                 <h3>{t("Send us a Message")}</h3>
                 <From />
               </div>

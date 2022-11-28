@@ -18,17 +18,7 @@ const PageAbout = () => {
       <Header />
       <PageHeader
         bgImg={"https://wallpaperaccess.com/full/3155150.jpg"}
-        content="<i>Sana dün bir tepeden baktım aziz İstanbul!<br/>
-                Görmedim gezmediğim, sevmediğim hiçbir yer.<br/>
-                Ömrüm oldukça, gönül tahtıma keyfince kurul!<br/>
-                Sade bir semtini sevmek bile bir ömre değer.<br/>
-                Nice revnaklı şehirler görülür dünyada,<br/>
-                Lakin efsunlu güzellikleri sensin yaratan.<br/>
-                Yaşamıştır derim, en hoş ve uzun rü’yada<br/>
-                Sende çok yıl yaşayan, sende ölen, sende yatan.<br/>
-                <br/></i>
-                Yahya Kemal Beyatlı 
-                "
+        content={"poem"}
       />
       <About
         imgUrl={
