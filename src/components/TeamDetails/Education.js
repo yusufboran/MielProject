@@ -12,7 +12,7 @@ const Education = ({teamMember}) => {
                     <div className="member-education mem-achieve-item">
                         <SectionTitle
                             heading={'Education'}
-                            text="Businex boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
+                            text="Miel boluptatum deleniti atque corrupti quosres et quas molestias cepturi sint eca
                             itate non vident, similique suntculpa modi tempora incidunt ut labore et dolor am
                             aera boluptatum deleniti corrupti."
                         />

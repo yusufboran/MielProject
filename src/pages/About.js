@@ -6,7 +6,7 @@ import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
-import Team from "../components/Team/home-two";
+import Team from "../components/Team";
 
 const PageAbout = () => {
   React.useEffect(() => {
@@ -27,7 +27,6 @@ const PageAbout = () => {
         content="about_context"
       />
       <Team />
-      {/* <Testimonial />*/}
       <CallToAction />
       <Footer />
       <LoginRegister />

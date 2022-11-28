@@ -7,7 +7,7 @@ class Logo extends Component {
         return (
             <div className="logo-area">
                 <Link to="/">
-                    <img src={logo} alt="Businex-Logo"/>
+                    <img src={logo} alt="Logo"/>
                 </Link>
             </div>
         );

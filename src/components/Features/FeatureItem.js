@@ -7,7 +7,7 @@ function FeatureItem(props) {
         <div className="col-md-4">
             <div className="icon-box-item">
                 <div className="icon-box__icon">
-                    <img src={require('../../assets/img/' + props.img)} alt="Businex-Feature"/>
+                    <img src={require('../../assets/img/' + props.img)} alt="Feature"/>
                 </div>
                 <div className="icon-box__info">
                     <h5>{t( props.title)}</h5>

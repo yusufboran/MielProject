@@ -5,7 +5,7 @@ function LogoItem(props) {
     <div className="brand-logo-item">
       <img
         src={require("../../assets/img/" + props.logoSrc)}
-        alt="Businex-Logo"
+        alt="Logo"
       />
     </div>
   );
