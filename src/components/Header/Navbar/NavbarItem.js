@@ -11,7 +11,7 @@ function NavbarItem() {
     <>
       {navbarData.map((item) => (
         <li>
-          <Link to={`${process.env.PUBLIC_URL + item.link}`}>
+          <Link key={item.id} to={`${process.env.PUBLIC_URL + item.link}`}>
             {t(item.title)}{" "}
           </Link>
         </li>

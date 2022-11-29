@@ -3,8 +3,9 @@ import List from "../UI/List";
 import LI from "../UI/List/Item";
 import IconBox from "../IconBox";
 import Text from "../UI/Text";
-import parse from "html-react-parser";
+
 import HowWeWorksData from "../../data/HowWeWorks/how-we-works";
+import Sidebar from "../Sidebar";
 import SidebarItem from "../Sidebar/SidebarItem";
 import Anchor from "../UI/Anchor";
 
@@ -14,24 +15,12 @@ const ServiceContentWrap = ({
   prevService,
   nextService,
 }) => {
-  function titleCase(str) {
-    var splitStr = str.toLowerCase().split(" ");
-    for (var i = 0; i < splitStr.length; i++) {
-      splitStr[i] =
-        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
-    }
-    var text = splitStr.join(" ");
-    text = parse(text);
-    return text;
-  }
-
   return (
     <div className="col-lg-12">
-      
       <div className="service-details-content">
         <div className="service-details-info">
           <h3>{service.title}</h3>
-          <p>{titleCase(service.shortDesc)}</p>
+          <p>{service.shortDesc}</p>
 
           <div className="about-service mt-50 mt-sm-35">
             <h4>About this Service</h4>
@@ -69,22 +58,57 @@ const ServiceContentWrap = ({
             </div>
           </div>
           <div className="download-documents">
-            <SidebarItem title="Download Brochure">
-              <List classes="service-list">
-                <LI>
-                  <Anchor path="/">
-                    <i className="fa fa-file-pdf-o" />
-                    Brochures.PDF
-                  </Anchor>
-                </LI>
-                <LI>
-                  <Anchor path="/">
-                    <i className="fa fa-file-word-o" />
-                    Brochures.DOC
-                  </Anchor>
-                </LI>
-              </List>
-            </SidebarItem>
+            <Sidebar classes={"col-lg-8 mtn-40"}>
+              <SidebarItem title="Download Brochure">
+                <List classes="service-list">
+                  <LI>
+                    <Anchor path="/">
+                      <i className="fa fa-file-pdf-o" />
+                      Brochures.PDF
+                    </Anchor>
+                  </LI>
+                  <LI>
+                    <Anchor path="/">
+                      <i className="fa fa-file-word-o" />
+                      Brochures.DOC
+                    </Anchor>
+                  </LI>
+                </List>
+              </SidebarItem>
+            </Sidebar>
+          </div>
+
+          <div className="pagination-wrap">
+            <ul className="pagination">
+              <li className="prev">
+                <a
+                  href={`${
+                    process.env.PUBLIC_URL +
+                    `/projects/${prevService.title
+                      .split(" ")
+                      .join("-")
+                      .toLocaleLowerCase()}?id=${prevService.id}`
+                  }`}
+                  className={service.id === 1 ? "disabled" : null}
+                >
+                  <i className="fa fa-long-arrow-left" /> Previous
+                </a>
+              </li>
+              <li className="next">
+                <a
+                  href={`${
+                    process.env.PUBLIC_URL +
+                    `/projects/${nextService.title
+                      .split(" ")
+                      .join("-")
+                      .toLocaleLowerCase()}?id=${nextService.id}`
+                  }`}
+                  className={service.id === totalService ? "disabled" : null}
+                >
+                  Next <i className="fa fa-long-arrow-right" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

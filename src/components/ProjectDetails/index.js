@@ -4,10 +4,12 @@ import ServiceContentWrap from "./ServiceContentWrap";
 import RelatedServices from "../../components/RelatedServices";
 import ProjectData from "../../data/Projects/projects.json";
 import Slider from "../Slider";
-import PdfView from "../PdfView";
+import { useLocation } from 'react-router-dom'
+
 
 const ServiceDetails = () => {
-  const serviceID = new URLSearchParams(window.location.search).get("id");
+  const location = useLocation()
+  const serviceID =  new URLSearchParams(location.search).get("id");
   const service = ProjectData.find(
     (serviceItem) => serviceItem.id === parseInt(serviceID)
   );
