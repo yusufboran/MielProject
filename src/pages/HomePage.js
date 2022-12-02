@@ -7,7 +7,6 @@ import Funfact from "../components/Funfact";
 import CallToAction from "../components/CallToAction";
 
 import Footer from "../components/Footer";
-import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
 import SliderData from "../data/Slider/home-1";
 
@@ -30,7 +29,6 @@ const HomePage = () => {
       <CallToAction />
       <Footer />
       <MobileMenu />
-      <LoginRegister />
     </Fragment>
   );
 };

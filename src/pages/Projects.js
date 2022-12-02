@@ -2,7 +2,6 @@ import React, { Fragment } from "react";
 import Header from "../components/Header";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
-import LoginRegister from "../components/LoginRegister";
 import MobileMenu from "../components/MobileMenu";
 
 import Services from "../components/Projects";
@@ -17,7 +16,6 @@ const ProjectsPage = () => {
       <Services  />
       <CallToAction />
       <Footer />
-      <LoginRegister />
       <MobileMenu />
     </Fragment>
   );

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- The core React library -->
+    <script src="https://unpkg.com/react@15.5.0/dist/react.min.js"></script>
+    <!-- The ReactDOM Library -->
+    <script src="https://unpkg.com/react-dom@15.5.0/dist/react-dom.min.js"></script>
+    <!-- ReactGA library -->
+    <script src="/path/to/bower_components/react-ga/dist/react-ga.min.js"></script>
+
+    <script>
+      ReactGA.initialize("UA-250488113-1", { debug: true });
+    </script>
+
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/fav.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,18 +24,29 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>MielProje</title>
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KSMSWH7');</script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KSMSWH7");
+    </script>
   </head>
   <body>
-
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSMSWH7"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KSMSWH7"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-   
   </body>
 </html>
