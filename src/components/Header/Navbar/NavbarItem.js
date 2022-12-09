@@ -16,7 +16,7 @@ function NavbarItem() {
           </Link>
         </li>
       ))}
-      <LanguageSelect/>
+      <LanguageSelect />
     </>
   );
 }

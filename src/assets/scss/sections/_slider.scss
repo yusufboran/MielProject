@@ -3,6 +3,8 @@
 =======================*/
 .slider {
   &-item {
+    display: flex;
+    position: relative;
     background-size: cover;
     background-position: center center;
     display: flex !important;
@@ -107,7 +109,7 @@
     }
   }
 
-  .slick-dots{
+  .slick-dots {
     display: flex !important;
     position: absolute;
     margin-top: 0;
@@ -116,8 +118,8 @@
     transform: translateX(-50%);
   }
 
-  &--2{
-    .slick-arrow{
+  &--2 {
+    .slick-arrow {
       color: $white;
     }
   }

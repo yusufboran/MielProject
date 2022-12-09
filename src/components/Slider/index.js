@@ -1,5 +1,6 @@
 import React from "react";
 import SlickSlider from "../UI/Slick";
+import HomeItem from "./HomeItem";
 import Item from "./Item";
 
 const Arrow = ({ className, onClick, icon }) => {
@@ -10,7 +11,7 @@ const Arrow = ({ className, onClick, icon }) => {
   );
 };
 
-const Slider = (props) => {
+const Slider = ({ images, page }) => {
   const settings = {
     arrows: true,
     dots: true,
@@ -33,9 +34,13 @@ const Slider = (props) => {
   return (
     <div className={"slider-area"}>
       <SlickSlider settings={settings}>
-        {props.data.map((item) => (
-          <Item item={item} />
-        ))}
+        {images.map((image) =>
+          page === "home" ? (
+            <HomeItem item={image} />
+          ) : (
+            <Item item={image} />
+          )
+        )}
       </SlickSlider>
     </div>
   );

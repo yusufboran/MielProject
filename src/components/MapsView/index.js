@@ -9,6 +9,7 @@ import {
 import markers from "./data.json";
 import mapStyles from "./mapStyles";
 import MarkerInfoBox from "./MarkerInfoBox";
+import icon from "../../assets/img/locationIcon.png"
 
 const mapOptions = {
   fullscreenControl: false,
@@ -56,7 +57,7 @@ function Map() {
           onMouseOver={() => handleActiveMarker(id)}
           onClick={() => handleActiveMarker(id)}
           icon={{
-            url: "https://cdn-icons-png.flaticon.com/512/1599/1599834.png",
+            url: "https://cdn-icons-png.flaticon.com/512/1550/1550590.png",
             scaledSize: new window.google.maps.Size(60, 60),
           }}
         >
@@ -83,7 +84,7 @@ function Map() {
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 export default function Main() {
-  const api = "AIzaSyAi9t9QLLtA1qArKTK_mE3wSUFSYZxQiok"; //google developer api key AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA
+  const api = "AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA"; //google developer api key AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA
   return (
     <div style={{ width: "100%", height: "88vh" }}>
       <MapWrapped

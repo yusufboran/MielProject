@@ -10,8 +10,6 @@ import aboutData from "../../../data/About/home-one";
 const About = ({ content, imgUrl, disable }) => {
   const { t } = useTranslation();
   const [about] = useState(aboutData);
-  const serviceID = new URLSearchParams(window.location.search);
-  console.log("serviceID " + serviceID);
 
   return (
     <div className="about-area-wrapper sm-top">

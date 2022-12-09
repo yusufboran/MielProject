@@ -1,19 +1,27 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Header from "../components/Header";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 
-import Services from "../components/Projects";
+import Projects from "../components/Projects";
+import { getProjectsList } from "../firebase";
 
 const ProjectsPage = () => {
-  React.useEffect(() => {
+  useEffect(() => {
     document.title = `Projects`;
-  });
+    getItem();
+  }, []);
+
+  const getItem = () => {
+    getProjectsList(setProjects);
+  };
+
+  const [projects, setProjects] = useState([]);
   return (
     <Fragment>
       <Header />
-      <Services  />
+      <Projects projects={projects} />
       <CallToAction />
       <Footer />
       <MobileMenu />

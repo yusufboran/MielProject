@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SectionTitle from "../UI/SectionTitle";
 import ProjectItem from "./ProjectItem";
-import ProjectData from "../../data/Projects/projects.json";
 
-function Services({ classes }) {
+function Services({ projects }) {
+  useEffect(() => {
+    console.log(projects[0]);
+  });
+
   return (
-    <div className={`service-area-wrapper ${classes}`}>
+    <div className={`service-area-wrapper`}>
       <div
         className="service-area-top"
         style={{
@@ -28,16 +31,22 @@ function Services({ classes }) {
       <div className="service-content-area">
         <div className="container">
           <div className="row mtn-30">
-            {ProjectData.map((project) => (
-              <ProjectItem
-                key={project.id}
-                id={project.id}
-                title={project.title}
-                text={project.shortDesc}
-                thumb={project.thumb}
-                promotional_text={project.promotional_text}
-              />
-            ))}
+            {projects &&
+              projects.map((project) => {
+                const randomFile = Math.floor(
+                  Math.random() * project.files.length
+                );
+                return (
+                  <ProjectItem
+                    key={1}
+                    id={project.id}
+                    title={project.projectName}
+                    features={project.features}
+                    thumb={project.files[randomFile]}
+                    promotional_text={"project.promotional_text"}
+                  />
+                );
+              })}
           </div>
         </div>
       </div>

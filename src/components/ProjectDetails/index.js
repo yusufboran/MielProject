@@ -1,19 +1,23 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import PageWrapper from "../../components/PageWrapper";
 import ServiceContentWrap from "./ServiceContentWrap";
 import RelatedServices from "../../components/RelatedServices";
 import ProjectData from "../../data/Projects/projects.json";
 import Slider from "../Slider";
-import { useLocation } from 'react-router-dom'
-
+import { useLocation } from "react-router-dom";
+import { getProject } from "../../firebase";
 
 const ServiceDetails = () => {
-  const location = useLocation()
-  const serviceID =  new URLSearchParams(location.search).get("id");
+  const location = useLocation();
+  const serviceID = new URLSearchParams(location.search).get("id");
+  const [item, setItem] = useState();
+  useEffect(() => {
+    getProject(serviceID, setItem);
+  }, []);
+
   const service = ProjectData.find(
-    (serviceItem) => serviceItem.id === parseInt(serviceID)
+    (serviceItem) => serviceItem.id === parseInt(1)
   );
-  console.log(service);
 
   const currentService = ProjectData.indexOf(service);
   let prevService;
@@ -24,20 +28,26 @@ const ServiceDetails = () => {
   currentService + 1 === ProjectData.length
     ? (nextService = ProjectData[currentService])
     : (nextService = ProjectData[currentService + 1]);
-
+  console.log(service.image);
   return (
     <Fragment>
-      <Slider data={service.image} />
-      <PageWrapper classes="sm-top service-details-wrapper">
-        <ServiceContentWrap
-          service={service}
-          totalService={ProjectData.length}
-          nextService={nextService}
-          prevService={prevService}
-        />
-      </PageWrapper>
+      {item && (
+        <>
+          <Slider images={item.files} />
 
-      <RelatedServices />
+          <PageWrapper classes="sm-top service-details-wrapper">
+            <ServiceContentWrap
+              description={item.description}
+              service={service}
+              totalService={ProjectData.length}
+              nextService={nextService}
+              prevService={prevService}
+            />
+          </PageWrapper>
+
+          <RelatedServices />
+        </>
+      )}
     </Fragment>
   );
 };

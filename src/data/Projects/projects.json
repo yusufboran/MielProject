@@ -4,7 +4,7 @@
     "title": "Nidapark",
     "shortDesc":   "TAKSİM’E 10 DAKİKA<br> YENİ HAVALİMANI’NA 32 KM<br> PIERRE LOTI 2 KM<br> AVRASYA TÜNELİ’NE 25 KM",
 
-    "thumb": "project/nidapark/3.JPG",
+    "thumb": "https://images.unsplash.com/photo-1670491777181-c1fd8ce8b23d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     "image":[
       {
         "id": 1,
@@ -103,7 +103,7 @@
     "id": 2,
     "title": "Yeşilpınar Evleri",
     "shortDesc": "Metroya doğrudan bağlantı<br> Bostancı İskelesi<br> Sahil ve Çevre yolu<br> Havalimanına 25 dakika",
-    "thumb": "project/yesilpinarevler/2.jpg",
+    "thumb": "https://images.unsplash.com/photo-1670491777181-c1fd8ce8b23d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     "image":[
       {
         "id": 1,
