@@ -6,7 +6,7 @@ import Features from "../components/Features";
 import Funfact from "../components/Funfact";
 import CallToAction from "../components/CallToAction";
 
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
 import { getHomeProjectList } from "../firebase";
 

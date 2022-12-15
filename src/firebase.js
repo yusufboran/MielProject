@@ -160,4 +160,24 @@ export const getProject = async (id, setItem) => {
   }
 };
 
+export const getSocialMedia = async (setItems) => {
+  try {
+    const items = [];
+    const querySnapshot = await getDocs(collection(db, "socialMedia"));
+
+    querySnapshot.forEach((doc) => {
+      const item = {
+        id: doc.id,
+        socialMedia: doc.data().socialMedia,
+        username: doc.data().username,
+      };
+      items.push(item);
+    });
+
+    setItems(items);
+  } catch (error) {
+    toast.error("getSocialMedia", error.message);
+  }
+};
+
 export default app;

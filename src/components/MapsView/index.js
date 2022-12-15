@@ -9,7 +9,7 @@ import {
 import markers from "./data.json";
 import mapStyles from "./mapStyles";
 import MarkerInfoBox from "./MarkerInfoBox";
-import icon from "../../assets/img/locationIcon.png"
+import icon from "../../assets/img/locationIcon.png";
 
 const mapOptions = {
   fullscreenControl: false,

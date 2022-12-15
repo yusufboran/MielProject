@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import PageHeader from "../components/PageHeader";
 import About from "../components/About/home-one";
 import CallToAction from "../components/CallToAction";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
 import Team from "../components/Team";
 

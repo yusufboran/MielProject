@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Header from "../components/Header";
 import ContactPage from "../components/Contact";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
 
 const PageContact = () => {

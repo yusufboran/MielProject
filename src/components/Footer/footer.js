@@ -1,8 +1,14 @@
-import React from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "./styles.css";
 import socialNetworks from "../../data/SocialNetworks/socials";
+import { getSocialMedia } from "../../firebase";
+function Footer() {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    getSocialMedia(setItems);
+    console.log(items);
+  }, []);
 
-const index = () => {
   return (
     <footer class="site-footer">
       <div class="container">
@@ -16,24 +22,23 @@ const index = () => {
 
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
-              {socialNetworks.map((social) => (
-                <li>
+              {items.map((item) => {
+                return (
                   <a
-                    key={social.id}
-                    href={`https://${social.networkName}.com/${social.username}`}
+                    href={`https://${item.socialMedia}.com/${item.username}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <i className={`fa fa-${social.networkName}`} />
+                    <i className={`fa fa-${item.socialMedia}`} />
                   </a>
-                </li>
-              ))}
+                );
+              })}
             </ul>
           </div>
         </div>
       </div>
     </footer>
   );
-};
+}
 
-export default index;
+export default Footer;
