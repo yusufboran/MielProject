@@ -6,10 +6,8 @@ import {
   Marker,
   InfoWindow,
 } from "react-google-maps";
-import markers from "./data.json";
 import mapStyles from "./mapStyles";
 import MarkerInfoBox from "./MarkerInfoBox";
-import icon from "../../assets/img/locationIcon.png";
 
 const mapOptions = {
   fullscreenControl: false,
@@ -19,6 +17,22 @@ const mapOptions = {
   streetViewControl: false,
 };
 
+const map = [
+  {
+    id: 1,
+    name: "istanbul",
+    position: { lat: 41.1025676958411, lng: 28.985145230732222 },
+    info: {
+      id: 1,
+      title: "Skyland İstanbul",
+      phone: "+012354 658 987",
+      address:
+        "Huzur Mahallesi Azarbeycan Caddesi Skyland Office B blok Kat:13 no:201",
+      profilePic:
+        "https://www.propertyturkeyistanbul.com/wp-content/uploads/2021/12/SKYLAND-ISTANBUL-propertyturkeyistanbul-39.jpg",
+    },
+  },
+];
 function Map() {
   const [activeMarker, setActiveMarker] = useState(null);
 
@@ -50,7 +64,7 @@ function Map() {
       defaultCenter={{ lat: 41.06018769153425, lng: 29.04100341843807 }}
       mapContainerStyle={{ width: "100vw", height: "100vh" }}
     >
-      {markers.map(({ id, position, info }) => (
+      {map.map(({ id, position, info }) => (
         <Marker
           key={id}
           position={position}

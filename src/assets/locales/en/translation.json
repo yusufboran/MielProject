@@ -18,12 +18,9 @@
     "project_heading": "The most beautiful projects we have developed for Istanbul",
     "learn_more":"Learn More",
 
-    "feature1_title": "Expert Advisors",
-    "feature1_text": "With our expert consultants, the real estate you target can easily be yours.",
-    "feature2_title": "Targeted Projects",
-    "feature2_text": "By adding valuable and future projects to our portfolio instead of being in every project, we guarantee you to win both while buying and after.",
-    "feature3_title": "Support After Sale",
-    "feature3_text": "We are always with you and ready to support during and after the sale.",
+    "Targeted Projects": "Expert Advisors",
+    "Expert Advisors": "Expert Advisors",
+    "Support After Sale": "Support After Sale",
 
     "team" : "Creative Team",
     "team_title" : "We have great <br />creative team",

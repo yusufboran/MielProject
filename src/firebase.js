@@ -180,4 +180,25 @@ export const getSocialMedia = async (setItems) => {
   }
 };
 
+export const getFeaturesList = async (setItems) => {
+  try {
+    const items = [];
+    const querySnapshot = await getDocs(collection(db, "features"));
+    var value = 1;
+
+    querySnapshot.forEach((doc) => {
+      items.push({
+        id: value,
+        title: doc.data().title,
+        trText: doc.data().trText,
+        enText: doc.data().enText,
+      });
+      value = value + 1;
+    });
+
+    setItems(items);
+  } catch (error) {
+    toast.error("getSocialMedia", error.message);
+  }
+};
 export default app;

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Feature from "./FeatureItem";
-
+import { getFeaturesList } from "../../firebase";
 const data = [
   {
     id: 1,
@@ -23,17 +23,18 @@ const data = [
 ];
 
 function Features({ classes }) {
+  const [items, setItems] = useState([]);
+  useEffect(() => {
+    getFeaturesList(setItems);
+    console.log(items);
+  }, []);
+
   return (
     <div className={`feature-area-wrapper ${classes}`}>
       <div className="container">
         <div className="row mtn-sm-60 mtn-md-5">
-          {data.map((feature) => (
-            <Feature
-              key={feature.id}
-              title={feature.title}
-              text={feature.text}
-              img={feature.imgSrc}
-            />
+          {items.map((item) => (
+            <Feature item={item} />
           ))}
         </div>
       </div>
