@@ -201,4 +201,33 @@ export const getFeaturesList = async (setItems) => {
     toast.error("getSocialMedia", error.message);
   }
 };
+
+
+
+export const getILocationsList = async (setItems) => {
+  try {
+    const items = [];
+    const querySnapshot = await getDocs(collection(db, "locations"));
+    querySnapshot.forEach((doc) => {
+      console.log(doc.data());
+      //   <TableCell>İmage</TableCell>
+
+      const item = {
+        id: doc.id,
+        title: doc.data().title,
+        address: doc.data().address,
+        phone: doc.data().phone,
+        location: doc.data().location,
+        imgUrl: doc.data().imgUrl,
+      };
+
+      items.push(item);
+    });
+
+    setItems(items);
+  } catch (error) {
+    toast.error("getSocialMedia", error.message);
+  }
+};
+
 export default app;

@@ -6,8 +6,9 @@ import {
   Marker,
   InfoWindow,
 } from "react-google-maps";
+import { getILocationsList } from "../../firebase";
 import mapStyles from "./mapStyles";
-import MarkerInfoBox from "./MarkerInfoBox";
+import parse from "html-react-parser";
 
 const mapOptions = {
   fullscreenControl: false,
@@ -17,24 +18,13 @@ const mapOptions = {
   streetViewControl: false,
 };
 
-const map = [
-  {
-    id: 1,
-    name: "istanbul",
-    position: { lat: 41.1025676958411, lng: 28.985145230732222 },
-    info: {
-      id: 1,
-      title: "Skyland İstanbul",
-      phone: "+012354 658 987",
-      address:
-        "Huzur Mahallesi Azarbeycan Caddesi Skyland Office B blok Kat:13 no:201",
-      profilePic:
-        "https://www.propertyturkeyistanbul.com/wp-content/uploads/2021/12/SKYLAND-ISTANBUL-propertyturkeyistanbul-39.jpg",
-    },
-  },
-];
 function Map() {
   const [activeMarker, setActiveMarker] = useState(null);
+  const [items, setItems] = React.useState([]);
+
+  useEffect(() => {
+    getILocationsList(setItems);
+  }, []);
 
   const handleActiveMarker = (marker) => {
     if (marker === activeMarker) {
@@ -64,18 +54,21 @@ function Map() {
       defaultCenter={{ lat: 41.06018769153425, lng: 29.04100341843807 }}
       mapContainerStyle={{ width: "100vw", height: "100vh" }}
     >
-      {map.map(({ id, position, info }) => (
+      {items.map((item) => (
         <Marker
-          key={id}
-          position={position}
-          onMouseOver={() => handleActiveMarker(id)}
-          onClick={() => handleActiveMarker(id)}
+          key={item.id}
+          position={{
+            lat: parseFloat(item.location.split(",")[0]),
+            lng: parseFloat(item.location.split(",")[1]),
+          }}
+          onMouseOver={() => handleActiveMarker(item.id)}
+          onClick={() => handleActiveMarker(item.id)}
           icon={{
             url: "https://cdn-icons-png.flaticon.com/512/1550/1550590.png",
             scaledSize: new window.google.maps.Size(60, 60),
           }}
         >
-          {activeMarker === id ? (
+          {activeMarker === item.id ? (
             <InfoWindow
               style={{
                 backgroundColor: "white",
@@ -87,7 +80,25 @@ function Map() {
               }}
               onCloseClick={() => setActiveMarker(null)}
             >
-              <MarkerInfoBox info={info} />
+              <div style={{ marginLeft: "6px" }}>
+                <div className="team-mem-item">
+                  <figure className="member-pic">
+                    <img
+                      src={item.imgUrl}
+                      alt="Girl in a jacket"
+                      width="500"
+                      height="600"
+                    />
+                  </figure>
+                  <div className="member-info">
+                    <h5>{item.title}</h5>
+                    <p>
+                      <a href={"tel:" + item.phone}> {item.phone}</a>
+                    </p>
+                    <span className="designation">{parse(item.address)}</span>
+                  </div>
+                </div>
+              </div>
             </InfoWindow>
           ) : null}
         </Marker>
