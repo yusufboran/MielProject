@@ -3,21 +3,13 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import toast from "react-hot-toast";
 import {
   collection,
-  addDoc,
   getFirestore,
   getDocs,
   getDoc,
   doc,
-  updateDoc,
-  deleteDoc,
+  addDoc,
 } from "firebase/firestore";
-import {
-  getStorage,
-  ref,
-  uploadBytes,
-  deleteObject,
-  getDownloadURL,
-} from "firebase/storage";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC4iGWSLSOdBXG6q72J_uDo-i5VGBrLSro",
@@ -202,8 +194,6 @@ export const getFeaturesList = async (setItems) => {
   }
 };
 
-
-
 export const getILocationsList = async (setItems) => {
   try {
     const items = [];
@@ -228,6 +218,12 @@ export const getILocationsList = async (setItems) => {
   } catch (error) {
     toast.error("getSocialMedia", error.message);
   }
+};
+
+export const addMessage = async (item) => {
+  try {
+    const docRef = await addDoc(collection(db, "message"), item);
+  } catch (error) {}
 };
 
 export default app;

@@ -29,12 +29,13 @@
 
     "contact_Info": "Contact Info",
     "Send us a Message" : "Send us a Message",
-    "First Name":"First Name",
+    "Name":"First Name",
     "Last Name":"Last Name",
     "Email address": "Email address",
     "Phone No":"Phone No",
     "Write Your Message":"Write Your Message",
     "Send Message":"Send Message",
+    "success message":"Your message has been sent",
 
     
     "delivered house" : "Delivered house",

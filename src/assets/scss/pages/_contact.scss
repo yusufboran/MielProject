@@ -5,7 +5,8 @@
   color: $paragraph;
   margin-bottom: 30px;
 
-  label, .custom-control-label {
+  label,
+  .custom-control-label {
     color: $paragraph;
     display: block;
     margin-bottom: 10px;
@@ -14,14 +15,15 @@
 
     &.required {
       &:after {
-        content: '*';
+        content: "*";
         color: red;
         margin-left: 2px;
       }
     }
   }
 
-  input, textarea {
+  input,
+  textarea {
     border: 1px solid $borderColor;
     border-radius: 4px;
     color: $paragraph;

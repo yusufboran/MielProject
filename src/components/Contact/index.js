@@ -6,14 +6,13 @@ import { useTranslation } from "react-i18next";
 const ContactPage = () => {
   const { t } = useTranslation();
   return (
-    <div className={"contact-page-area-wrapper sp-y"}>
+    <div className={"contact-page-area-wrapper sp-y h-80ch "}>
       <div className="container">
         <div className="contact-content-wrap">
           <div className="row">
             <div className="col-lg-8">
               <div className="contact-form-area contact-method">
-                
-                <h3>{t("Send us a Message")}</h3>
+              
                 <From />
               </div>
             </div>

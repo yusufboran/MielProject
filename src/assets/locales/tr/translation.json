@@ -5,46 +5,43 @@
   "offices": "Ofislerimiz",
   "projects": "Projeler",
   "contact": "İletişim",
-  "go_back_home":"Anasayfa'ya Dön",
+  "go_back_home": "Anasayfa'ya Dön",
   "loginBtn": "Giriş yap",
   "login": "Giriş Ekranı",
-  "copyright":"© 2022 Telif hakkı MielProje'ye aittir. Tüm hakları Saklıdır.",
+  "copyright": "© 2022 Telif hakkı MielProje'ye aittir. Tüm hakları Saklıdır.",
   "call_to_action_text": "<b>MielProje</b> siz ve sevdikleriniz için en iyi yaşanabilir koşulları sunuyoruz.",
-  "contact_us":"Bize Ulaşın",
-  "For more information":"Daha fazla bilgi için",   
-  "about_context":"<b>İstanbul</b> bin altı yüz yıl boyunca, 330'dan 1922'ye kadar bulunan dönemde; 4 farklı imparatorluğa başkentlik yapmış , şiirlere konu olmuş bir şehir.<br> Pek çok kültüre ev sahipliği yapan , tarihi , sanatı , geçmişi kalbinde taşıyan bu şehir aynı zamanda dünyanın en büyük metropollerinden biri. <br> Miel Proje Pazarlama ,bu eşsiz şehrin kalbinde , gerçek İstanbul’u yaşayabileceğiniz lokasyonlarda sizleri doğru yatırımlarla buluşturuyor. <br> Sürekli yenilenen  sektörümüzdeki inovatif çözümleri tecrübesi ile bir araya getirerek , bağımsız çözümlerle müşterilerinin ve işbirlikçileri ile güçlü ve güvenilir bir partner olmayı amaç edinen Miel Proje Pazarlama , müşteri memnuniyetini arttırmak, ekonomik çözümler sunmak, alıcısını doğru yatırım ile gerçek fiyatlarda buluşturmak misyonu ile yola çıkıyor.",
+  "contact_us": "Bize Ulaşın",
+  "For more information": "Daha fazla bilgi için",
+  "about_context": "<b>İstanbul</b> bin altı yüz yıl boyunca, 330'dan 1922'ye kadar bulunan dönemde; 4 farklı imparatorluğa başkentlik yapmış , şiirlere konu olmuş bir şehir.<br> Pek çok kültüre ev sahipliği yapan , tarihi , sanatı , geçmişi kalbinde taşıyan bu şehir aynı zamanda dünyanın en büyük metropollerinden biri. <br> Miel Proje Pazarlama ,bu eşsiz şehrin kalbinde , gerçek İstanbul’u yaşayabileceğiniz lokasyonlarda sizleri doğru yatırımlarla buluşturuyor. <br> Sürekli yenilenen  sektörümüzdeki inovatif çözümleri tecrübesi ile bir araya getirerek , bağımsız çözümlerle müşterilerinin ve işbirlikçileri ile güçlü ve güvenilir bir partner olmayı amaç edinen Miel Proje Pazarlama , müşteri memnuniyetini arttırmak, ekonomik çözümler sunmak, alıcısını doğru yatırım ile gerçek fiyatlarda buluşturmak misyonu ile yola çıkıyor.",
   "poem": "<i>Sana dün bir tepeden baktım aziz İstanbul!<br/>  Görmedim gezmediğim, sevmediğim hiçbir yer.<br/>  Ömrüm oldukça, gönül tahtıma keyfince kurul!<br/>  Sade bir semtini sevmek bile bir ömre değer.<br/> <br/> Nice revnaklı şehirler görülür dünyada,<br/>  Lakin efsunlu güzellikleri sensin yaratan.<br/>  Yaşamıştır derim, en hoş ve uzun rü’yada<br/>  Sende çok yıl yaşayan, sende ölen, sende yatan.<br/>  <br/></i> Yahya Kemal Beyatlı  ",
-  "More Details":"Daha fazlası için",    
+  "More Details": "Daha fazlası için",
   "project_heading": "İstanbul için geliştirdiğimiz en güzel projeler",
-  "learn_more":"Detaylı Bilgi",
+  "learn_more": "Detaylı Bilgi",
 
   "Targeted Projects": "Uzman Danışmanlar",
   "Expert Advisors": "Hedefli Projeler",
   "Support After Sale": "Satış Sonrası Destek",
 
-  "team" : "Ekibimiz",
-  "team_title" : "Harika bir <br />yaratıcı ekibimiz var",
-  "team_text" : "<strong>MielProje</strong>, Müşterilerin İşlerini keskin ve sorunsuz bir şekilde büyütmeleri için her zaman en iyi İş Çözümlerini sağlamaya çalışır.",
+  "team": "Ekibimiz",
+  "team_title": "Harika bir <br />yaratıcı ekibimiz var",
+  "team_text": "<strong>MielProje</strong>, Müşterilerin İşlerini keskin ve sorunsuz bir şekilde büyütmeleri için her zaman en iyi İş Çözümlerini sağlamaya çalışır.",
 
   "contact_Info": "İletişim Bilgileri",
 
-  "Send us a Message" : "Bize mesaj gönder",
-  "First Name":"Ad",
-  "Last Name":"Soyad",
+  "Send us a Message": "Bize mesaj gönder",
+  "First Name": "Ad",
+  "Last Name": "Soyad",
   "Email address": "E-mail adresi",
-  "Phone No":"Telefon Numarası",
-  "Write Your Message":"Mesajınızı Yazın",
-  "Send Message":"Gönder",
+  "Phone No": "Telefon Numarası",
+  "Write Your Message": "Mesajınızı Yazın",
+  "Send Message": "Gönder",
+  "success message": "Mesajınız gönderildi",
 
-  "delivered house" : "Teslim edilen ev",
-  "office" : "Ofis",
-  "worker":"Çalışan",
-  "project":"Proje",
+  "delivered house": "Teslim edilen ev",
+  "office": "Ofis",
+  "worker": "Çalışan",
+  "project": "Proje",
 
-  "More Project":"Projelerimiz",
-  "Related Project":"İlgili Proje"
-
-
-
-
+  "More Project": "Projelerimiz",
+  "Related Project": "İlgili Proje"
 }
