@@ -19,6 +19,9 @@
       height: 500px;
     }
   }
+  &-blurred {
+    filter: blur(10px) grayscale(50%);
+  }
 
   &-content {
     font-size: 16px;

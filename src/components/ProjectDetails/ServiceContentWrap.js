@@ -1,15 +1,7 @@
 import React from "react";
-import List from "../UI/List";
-import LI from "../UI/List/Item";
-import IconBox from "../IconBox";
-import Text from "../UI/Text";
+import PdfView from "../../components/PdfView/index";
 
-import HowWeWorksData from "../../data/HowWeWorks/how-we-works";
-import Sidebar from "../Sidebar";
-import SidebarItem from "../Sidebar/SidebarItem";
-import Anchor from "../UI/Anchor";
-
-const ServiceContentWrap = ({ prevService, nextService, description }) => {
+const ServiceContentWrap = ({ prevService, nextService, description, url }) => {
   return (
     <div className="col-lg-12">
       <div className="service-details-content">
@@ -18,26 +10,7 @@ const ServiceContentWrap = ({ prevService, nextService, description }) => {
             {<div dangerouslySetInnerHTML={{ __html: description }} />}
           </div>
 
-          <div className="download-documents">
-            <Sidebar classes={"col-lg-8 mtn-40"}>
-              <SidebarItem title="Download Brochure">
-                <List classes="service-list">
-                  <LI>
-                    <Anchor path="/">
-                      <i className="fa fa-file-pdf-o" />
-                      Brochures.PDF
-                    </Anchor>
-                  </LI>
-                  <LI>
-                    <Anchor path="/">
-                      <i className="fa fa-file-word-o" />
-                      Brochures.DOC
-                    </Anchor>
-                  </LI>
-                </List>
-              </SidebarItem>
-            </Sidebar>
-          </div>
+          <PdfView url={url} />
 
           <div className="pagination-wrap">
             <ul className="pagination">

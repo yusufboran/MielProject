@@ -1,17 +1,32 @@
 import React from "react";
 
 const Item = (image) => {
-  console.log(image.item);
   return (
     <div>
       {image.item ? (
         <div
-          className="slider-item"
           style={{
-            backgroundImage: `url(${image.item})`,
+            justifyContent: "center",
+            alignItems: "center",
           }}
+          className="slider-item"
         >
-         <img src={image.item} alt="Trulli" width="100%" height="100%" />
+          <img
+            className="slider-blurred"
+            style={{ position: "absolute" }}
+            src={image.item}
+            width="100%"
+            height="600px"
+          />
+
+          <img
+            style={{
+              position: "absolute",
+            }}
+            src={image.item}
+          />
+
+          <div style={{ zIndex: 3 }} className="container"></div>
         </div>
       ) : null}
     </div>

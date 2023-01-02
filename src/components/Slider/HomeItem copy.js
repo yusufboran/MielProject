@@ -8,21 +8,20 @@ const Item = ({ item }) => {
   return (
     <div
       style={{
-        backgroundImage: `url(${item.imageUrl})`,
-
         justifyContent: "center",
         alignItems: "center",
+
+        // backgroundImage: `url(${item.imageUrl})`,
+        backgroundImage: `url(https://images.unsplash.com/photo-1666396251085-4bf5b2a7fca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80)`,
       }}
       className="slider-item"
     >
-      <img
-        className="slider-blurred"
+        <img
         style={{ position: "absolute" }}
         src={item.imageUrl}
         width="100%"
         height="600px"
       />
-
       <img
         style={{
           position: "absolute",

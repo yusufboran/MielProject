@@ -5,7 +5,6 @@ import About from "../components/About/home-one";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
-import Team from "../components/Team";
 
 const PageAbout = () => {
   React.useEffect(() => {
@@ -25,7 +24,6 @@ const PageAbout = () => {
         }
         content="about_context"
       />
-      <Team />
       <CallToAction />
       <Footer />
       <MobileMenu />

@@ -6,11 +6,12 @@ import ProjectData from "../../data/Projects/projects.json";
 import Slider from "../Slider";
 import { useLocation } from "react-router-dom";
 import { getProject } from "../../firebase";
-
+import i18next from "i18next";
 const ServiceDetails = () => {
   const location = useLocation();
   const serviceID = new URLSearchParams(location.search).get("id");
   const [item, setItem] = useState();
+
   useEffect(() => {
     getProject(serviceID, setItem);
   }, []);
@@ -28,7 +29,6 @@ const ServiceDetails = () => {
   currentService + 1 === ProjectData.length
     ? (nextService = ProjectData[currentService])
     : (nextService = ProjectData[currentService + 1]);
-  console.log(service.image);
   return (
     <Fragment>
       {item && (
@@ -37,7 +37,12 @@ const ServiceDetails = () => {
 
           <PageWrapper classes="sm-top service-details-wrapper">
             <ServiceContentWrap
-              description={item.description}
+              url={item.presentation.url}
+              description={
+                i18next.language == "en"
+                  ? item.descriptionEN
+                  : item.descriptionTR
+              }
               service={service}
               totalService={ProjectData.length}
               nextService={nextService}

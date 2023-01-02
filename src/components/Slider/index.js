@@ -30,16 +30,16 @@ const Slider = ({ images, page }) => {
       },
     ],
   };
-
+  window.addEventListener("touchstart", function (event) {
+    // some logic
+    event.preventDefault(); // <-- that should not be used in passive
+    // some other magic
+  });
   return (
     <div className={"slider-area"}>
       <SlickSlider settings={settings}>
         {images.map((image) =>
-          page === "home" ? (
-            <HomeItem item={image} />
-          ) : (
-            <Item item={image} />
-          )
+          page === "home" ? <HomeItem item={image} /> : <Item item={image} />
         )}
       </SlickSlider>
     </div>
