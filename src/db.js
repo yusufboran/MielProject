@@ -1,6 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import axios from "axios";
 import toast from "react-hot-toast";
+
+import { initializeApp } from "firebase/app";
 import {
   collection,
   getFirestore,
@@ -12,17 +13,15 @@ import {
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDqE8vPtV2iv4RbId_aAIpEUcK8jGL_Vwk",
-  authDomain: "denemepersembe.firebaseapp.com",
-  projectId: "denemepersembe",
-  storageBucket: "denemepersembe.appspot.com",
-  messagingSenderId: "323155737862",
-  appId: "1:323155737862:web:068d57388f71dcb7d7b287",
-  measurementId: "G-KXH1VQG8CT",
+  apiKey: "AIzaSyC4iGWSLSOdBXG6q72J_uDo-i5VGBrLSro",
+  authDomain: "mielproje.firebaseapp.com",
+  projectId: "mielproje",
+  storageBucket: "mielproje.appspot.com",
+  messagingSenderId: "850541188172",
+  appId: "1:850541188172:web:4c19c6afe35d42f03c90e9",
 };
 
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
 const db = getFirestore();
 const storage = getStorage();
 
@@ -201,25 +200,10 @@ export const getFeaturesList = async (setItems) => {
 
 export const getILocationsList = async (setItems) => {
   try {
-    const items = [];
-    const querySnapshot = await getDocs(collection(db, "locations"));
-    querySnapshot.forEach((doc) => {
-      console.log(doc.data());
-      //   <TableCell>İmage</TableCell>
-
-      const item = {
-        id: doc.id,
-        title: doc.data().title,
-        address: doc.data().address,
-        phone: doc.data().phone,
-        location: doc.data().location,
-        imgUrl: doc.data().imgUrl,
-      };
-
-      items.push(item);
+    axios.get("http://localhost:3000/api/v1/map").then((response) => {
+      console.log(" axios response.data", response.data);
+      setItems(response.data);
     });
-
-    setItems(items);
   } catch (error) {
     toast.error("getSocialMedia", error.message);
   }
@@ -227,8 +211,11 @@ export const getILocationsList = async (setItems) => {
 
 export const addMessage = async (item) => {
   try {
-    const docRef = await addDoc(collection(db, "message"), item);
-  } catch (error) {}
+    var path = "http://localhost:3000/api/v1/contactform";
+    axios.post(path, item);
+  } catch (error) {
+    toast.error("addMessage", error.message);
+  }
 };
 
 export default app;

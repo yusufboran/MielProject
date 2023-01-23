@@ -6,7 +6,7 @@ import {
   Marker,
   InfoWindow,
 } from "react-google-maps";
-import { getILocationsList } from "../../firebase";
+import { getILocationsList } from "../../db";
 import mapStyles from "./mapStyles";
 import parse from "html-react-parser";
 
@@ -23,7 +23,8 @@ function Map() {
   const [items, setItems] = React.useState([]);
 
   useEffect(() => {
-    getILocationsList(setItems);
+    getILocationsList(setItems)
+   
   }, []);
 
   const handleActiveMarker = (marker) => {
@@ -58,8 +59,8 @@ function Map() {
         <Marker
           key={item.id}
           position={{
-            lat: parseFloat(item.location.split(",")[0]),
-            lng: parseFloat(item.location.split(",")[1]),
+            lat: item.location[0],
+            lng: item.location[1],
           }}
           onMouseOver={() => handleActiveMarker(item.id)}
           onClick={() => handleActiveMarker(item.id)}

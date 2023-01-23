@@ -2,7 +2,7 @@ import { Grid, styled } from "@mui/material";
 import React, { useState } from "react";
 import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
 import { useTranslation } from "react-i18next";
-import { addMessage } from "../../firebase";
+import { addMessage } from "../../db";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";

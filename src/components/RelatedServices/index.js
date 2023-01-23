@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SectionTitle from "../UI/SectionTitle";
 import ProjectItem from "../Projects/ProjectItem";
-import { getProjectsList } from "../../firebase";
+import { getProjectsList } from "../../db";
 import { useTranslation } from "react-i18next";
 
 const RelatedServices = () => {

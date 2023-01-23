@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import socialNetworks from "../../data/SocialNetworks/socials";
-import { getSocialMedia } from "../../firebase";
+import { getSocialMedia } from "../../db";
 
 const ContactInfo = ({ address }) => {
   const [items, setItems] = useState([]);

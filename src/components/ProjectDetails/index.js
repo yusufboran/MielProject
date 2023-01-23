@@ -5,7 +5,7 @@ import RelatedServices from "../../components/RelatedServices";
 import ProjectData from "../../data/Projects/projects.json";
 import Slider from "../Slider";
 import { useLocation } from "react-router-dom";
-import { getProject } from "../../firebase";
+import { getProject } from "../../db";
 import i18next from "i18next";
 const ServiceDetails = () => {
   const location = useLocation();

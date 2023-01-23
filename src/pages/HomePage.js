@@ -8,7 +8,7 @@ import CallToAction from "../components/CallToAction";
 
 import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
-import { getHomeProjectList } from "../firebase";
+import { getHomeProjectList } from "../db";
 
 const HomePage = () => {
   React.useEffect(() => {

@@ -5,7 +5,7 @@ import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
 
 import Projects from "../components/Projects";
-import { getProjectsList } from "../firebase";
+import { getProjectsList } from "../db";
 
 const ProjectsPage = () => {
   useEffect(() => {

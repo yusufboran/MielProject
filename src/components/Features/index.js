@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Feature from "./FeatureItem";
-import { getFeaturesList } from "../../firebase";
+import { getFeaturesList } from "../../db";
 const data = [
   {
     id: 1,
