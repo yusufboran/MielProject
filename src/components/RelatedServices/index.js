@@ -32,17 +32,17 @@ const RelatedServices = () => {
             .reverse()
             .slice(0, 3)
             .map((project) => {
-              console.log(project);
+              console.log("örnek projeler ", project);
               const randomFile = Math.floor(
-                Math.random() * project.files.length
+                Math.random() * project.paths.length
               );
               return (
                 <ProjectItem
                   key={project.id}
-                  id={project.id}
-                  title={project.projectName}
+                  id={project.pid}
+                  title={project.projectname}
                   features={project.features}
-                  thumb={project.files[randomFile]}
+                  thumb={project.paths[0]}
                 />
               );
             })}

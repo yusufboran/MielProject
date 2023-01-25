@@ -1,7 +1,7 @@
 import React from "react";
 import PdfView from "../../components/PdfView/index";
 
-const ServiceContentWrap = ({ prevService, nextService, description, url }) => {
+const ServiceContentWrap = ({ description, url }) => {
   return (
     <div className="col-lg-12">
       <div className="service-details-content">
@@ -10,12 +10,12 @@ const ServiceContentWrap = ({ prevService, nextService, description, url }) => {
             {<div dangerouslySetInnerHTML={{ __html: description }} />}
           </div>
 
-          <PdfView url={url} />
+          {/* <PdfView url={url} /> */}
 
           <div className="pagination-wrap">
             <ul className="pagination">
               <li className="prev">
-                <a
+                {/* <a
                   href={`${
                     process.env.PUBLIC_URL +
                     `/projects/${prevService.title
@@ -25,10 +25,10 @@ const ServiceContentWrap = ({ prevService, nextService, description, url }) => {
                   }`}
                 >
                   <i className="fa fa-long-arrow-left" /> Previous
-                </a>
+                </a> */}
               </li>
               <li className="next">
-                <a
+                {/* <a
                   href={`${
                     process.env.PUBLIC_URL +
                     `/projects/${nextService.title
@@ -38,7 +38,7 @@ const ServiceContentWrap = ({ prevService, nextService, description, url }) => {
                   }`}
                 >
                   Next <i className="fa fa-long-arrow-right" />
-                </a>
+                </a> */}
               </li>
             </ul>
           </div>

@@ -6,7 +6,7 @@ import {
   Marker,
   InfoWindow,
 } from "react-google-maps";
-import { getILocationsList } from "../../db";
+import { getLocationsList } from "../../db";
 import mapStyles from "./mapStyles";
 import parse from "html-react-parser";
 
@@ -23,7 +23,7 @@ function Map() {
   const [items, setItems] = React.useState([]);
 
   useEffect(() => {
-    getILocationsList(setItems)
+    getLocationsList(setItems)
    
   }, []);
 

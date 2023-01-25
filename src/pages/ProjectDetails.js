@@ -10,8 +10,7 @@ const PageProjectDetails = () => {
   return (
     <Fragment>
       <Header />
-      <ServiceDetails/>
-      <Funfact />
+      <ServiceDetails />
       <CallToAction />
       <Footer />
       <MobileMenu />

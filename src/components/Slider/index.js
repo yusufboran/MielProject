@@ -12,6 +12,7 @@ const Arrow = ({ className, onClick, icon }) => {
 };
 
 const Slider = ({ images, page }) => {
+  console.log("Slider", images);
   const settings = {
     arrows: true,
     dots: true,

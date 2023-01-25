@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import parse from "html-react-parser";
 
 function ProjectItem(props) {
   const projectUrl = `/projects/${props.title
@@ -12,7 +11,10 @@ function ProjectItem(props) {
       <div className="service-item">
         <figure className="service-thumb">
           <Link to={`${process.env.PUBLIC_URL + projectUrl}`}>
-            <img src={props.thumb} alt={props.title} />
+            <img
+              src={`http://localhost:3000/uploads/${props.thumb}`}
+              alt={props.title}
+            />
           </Link>
 
           <figcaption className="service-txt">

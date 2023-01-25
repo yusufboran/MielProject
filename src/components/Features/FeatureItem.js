@@ -17,9 +17,9 @@ function FeatureItem({ item }) {
           <h5>{t(item.title)}</h5>
 
           {i18next.language == "en" ? (
-            <p>{t(item.enText)}</p>
+            <p>{t(item.entext)}</p>
           ) : (
-            <p>{t(item.trText)}</p>
+            <p>{t(item.trtext)}</p>
           )}
         </div>
       </div>

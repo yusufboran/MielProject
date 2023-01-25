@@ -20,11 +20,11 @@ const ContactInfo = ({ address }) => {
         {items.map((item) => {
           return (
             <a
-              href={`https://${item.socialMedia}.com/${item.username}`}
+              href={`https://${item.socialmedia}.com/${item.username}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className={`fa fa-${item.socialMedia}`} />
+              <i className={`fa fa-${item.socialmedia}`} />
             </a>
           );
         })}

@@ -1,9 +1,10 @@
 import React from "react";
 
 const Item = (image) => {
+  console.log(image);
   return (
     <div>
-      {image.item ? (
+      {image ? (
         <div
           style={{
             justifyContent: "center",
@@ -14,7 +15,7 @@ const Item = (image) => {
           <img
             className="slider-blurred"
             style={{ position: "absolute" }}
-            src={image.item}
+            src={`http://localhost:3000/uploads/${image.item}`}
             width="100%"
             height="600px"
           />
@@ -23,7 +24,7 @@ const Item = (image) => {
             style={{
               position: "absolute",
             }}
-            src={image.item}
+            src={`http://localhost:3000/uploads/${image.item}`}
           />
 
           <div style={{ zIndex: 3 }} className="container"></div>

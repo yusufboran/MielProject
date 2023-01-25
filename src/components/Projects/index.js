@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { ProjectContext } from "../../App";
 import SectionTitle from "../UI/SectionTitle";
 import ProjectItem from "./ProjectItem";
 
-function Services({ projects }) {
+function Services() {
+  const projects = useContext(ProjectContext);
   useEffect(() => {
-    console.log(projects[0]);
+    console.log(projects);
   });
 
   return (
@@ -34,15 +36,15 @@ function Services({ projects }) {
             {projects &&
               projects.map((project) => {
                 const randomFile = Math.floor(
-                  Math.random() * project.files.length
+                  Math.random() * project.paths.length
                 );
                 return (
                   <ProjectItem
                     key={1}
-                    id={project.id}
-                    title={project.projectName}
+                    id={project.pid}
+                    title={project.projectname}
                     features={project.features}
-                    thumb={project.files[randomFile]}
+                    thumb={project.paths[randomFile]}
                     promotional_text={"project.promotional_text"}
                   />
                 );
