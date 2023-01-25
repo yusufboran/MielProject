@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import Header from "../components/Header";
 import PageHeader from "../components/PageHeader";
-import About from "../components/About/home-one";
+import About from "../components/About/component";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";

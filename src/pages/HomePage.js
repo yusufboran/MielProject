@@ -1,7 +1,7 @@
 import React, { Fragment, useContext } from "react";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
-import About from "../components/About/home-one";
+import About from "../components/About/component";
 import Features from "../components/Features";
 import Funfact from "../components/Funfact";
 import CallToAction from "../components/CallToAction";

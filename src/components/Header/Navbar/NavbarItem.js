@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import navbarData from "../../../data/Navbar/navbar";
 import { useTranslation } from "react-i18next";
 import LanguageSelect from "../../LanguegeSelector";
 
+
 function NavbarItem() {
   const { t } = useTranslation();
-
   return (
     <>
       {navbarData.map((item) => (
@@ -21,4 +20,40 @@ function NavbarItem() {
   );
 }
 
+var navbarData = [
+  {
+    id: 1,
+    title: "home",
+    link: "/",
+    megaMenu: false,
+    subMenu: false,
+  },
+  {
+    id: 2,
+    title: "about",
+    link: "/about",
+    megaMenu: false,
+    subMenu: false,
+  },
+  {
+    id: 3,
+    title: "offices",
+    link: "/offices",
+    megaMenu: false,
+    subMenu: false,
+  },
+  {
+    id: 4,
+    title: "projects",
+    link: "/projects",
+    megaMenu: false,
+    subMenu: false,
+  },
+
+  {
+    id: 5,
+    title: "contact",
+    link: "/contact",
+  },
+];
 export default NavbarItem;

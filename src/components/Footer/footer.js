@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 import "./styles.css";
-import socialNetworks from "../../data/SocialNetworks/socials";
 import { getSocialMedia } from "../../db";
 function Footer() {
   const [items, setItems] = useState([]);
