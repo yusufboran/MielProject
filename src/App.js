@@ -9,13 +9,8 @@ import OfficesPage from "./pages/Offices";
 import ProjectsPage from "./pages/Projects";
 import ServiceDetails from "./pages/ProjectDetails";
 import i18next from "i18next";
-import ReactGA from "react-ga";
 import { Toaster } from "react-hot-toast";
 import { getProjectsList } from "./db";
-
-const TRACINKG_ID = "UA-250488113-1";
-ReactGA.initialize(TRACINKG_ID);
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 export const ProjectContext = createContext();
 
