@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext } from "react";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
 import About from "../components/About/home-one";
@@ -8,19 +8,15 @@ import CallToAction from "../components/CallToAction";
 
 import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
-import { getHomeProjectList } from "../db";
+import { ProjectContext } from "../App";
 
 const HomePage = () => {
   React.useEffect(() => {
     document.title = `Welcome`;
-    getItem();
   }, []);
 
-  const getItem = () => {
-    getHomeProjectList(setProjects);
-  };
+  const projects = useContext(ProjectContext);
 
-  const [projects, setProjects] = useState([]);
   return (
     <Fragment>
       <Header />

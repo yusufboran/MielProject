@@ -8,8 +8,6 @@ const Item = ({ item }) => {
   return (
     <div
       style={{
-        backgroundImage: `url(${item.imageUrl})`,
-
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -18,7 +16,7 @@ const Item = ({ item }) => {
       <img
         className="slider-blurred"
         style={{ position: "absolute" }}
-        src={item.imageUrl}
+        src={`http://localhost:3000/uploads/${item.paths[0]}`}
         width="100%"
         height="600px"
       />
@@ -27,16 +25,16 @@ const Item = ({ item }) => {
         style={{
           position: "absolute",
         }}
-        src={item.imageUrl}
+        src={`http://localhost:3000/uploads/${item.paths[0]}`}
       />
 
       <div style={{ zIndex: 3 }} className="container">
         <div className="col-xl-7">
           <div className="slider-content">
-            <h2>{t(item.projectName)}</h2>
+            <h2>{t(item.projectname)}</h2>
 
             <Link
-              to={`${process.env.PUBLIC_URL + `/projects/$}?id=${item.id}`}`}
+              to={`${process.env.PUBLIC_URL + `/projects/$}?id=${item.pid}`}`}
               className="btn btn-brand"
             >
               {t("learn_more")}
