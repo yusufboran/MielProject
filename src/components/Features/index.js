@@ -33,8 +33,8 @@ function Features({ classes }) {
     <div className={`feature-area-wrapper ${classes}`}>
       <div className="container">
         <div className="row mtn-sm-60 mtn-md-5">
-          {items.map((item) => (
-            <Feature item={item} />
+          {items.map((item,index) => (
+            <Feature item={item} index={index} />
           ))}
         </div>
       </div>

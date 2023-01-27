@@ -2,14 +2,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 
-function FeatureItem({ item }) {
+function FeatureItem({ item, index }) {
   const { t } = useTranslation();
   return (
     <div className="col-md-4">
       <div className="icon-box-item">
         <div className="icon-box__icon">
           <img
-            src={require("../../assets/img/feature/0" + item.id + ".png")}
+            src={require("../../assets/img/feature/" + index + ".png")}
             alt="Feature"
           />
         </div>
