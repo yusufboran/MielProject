@@ -15,7 +15,7 @@ const Item = (image) => {
           <img
             className="slider-blurred"
             style={{ position: "absolute" }}
-            src={`http://localhost:3000/uploads/${image.item}`}
+            src={`http://localhost:3000/uploads/${image.item.image_path}`}
             width="100%"
             height="600px"
           />
@@ -24,7 +24,7 @@ const Item = (image) => {
             style={{
               position: "absolute",
             }}
-            src={`http://localhost:3000/uploads/${image.item}`}
+            src={`http://localhost:3000/uploads/${image.item.image_path}`}
           />
 
           <div style={{ zIndex: 3 }} className="container"></div>

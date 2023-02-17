@@ -5,9 +5,6 @@ import ProjectItem from "./ProjectItem";
 
 function Services() {
   const projects = useContext(ProjectContext);
-  useEffect(() => {
-    console.log(projects);
-  });
 
   return (
     <div className={`service-area-wrapper`}>
@@ -44,7 +41,7 @@ function Services() {
                     id={project.pid}
                     title={project.projectname}
                     features={project.features}
-                    thumb={project.paths[randomFile]}
+                    thumb={project.paths[randomFile].image_path}
                     promotional_text={"project.promotional_text"}
                   />
                 );

@@ -32,7 +32,6 @@ const RelatedServices = () => {
             .reverse()
             .slice(0, 3)
             .map((project) => {
-              console.log("örnek projeler ", project);
               const randomFile = Math.floor(
                 Math.random() * project.paths.length
               );
@@ -42,7 +41,7 @@ const RelatedServices = () => {
                   id={project.pid}
                   title={project.projectname}
                   features={project.features}
-                  thumb={project.paths[0]}
+                  thumb={project.paths[0].image_path}
                 />
               );
             })}

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Header from "../components/Header";
-import ServiceDetails from "../components/ProjectDetails";
+import ProjectDetails from "../components/ProjectDetails";
 import Funfact from "../components/Funfact";
 import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer/footer";
@@ -10,7 +10,7 @@ const PageProjectDetails = () => {
   return (
     <Fragment>
       <Header />
-      <ServiceDetails />
+      <ProjectDetails />
       <CallToAction />
       <Footer />
       <MobileMenu />

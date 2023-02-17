@@ -3,17 +3,17 @@ import PageWrapper from "../../components/PageWrapper";
 import ServiceContentWrap from "./ServiceContentWrap";
 import RelatedServices from "../../components/RelatedServices";
 import Slider from "../Slider";
-import { useLocation } from "react-router-dom";
 import { getProject } from "../../db";
 import i18next from "i18next";
 
 const ServiceDetails = () => {
-  const location = useLocation();
-  const serviceID = new URLSearchParams(location.search).get("id");
+  var url = window.location.href.split("/");
+  var projectId = url[url.length - 1];
+
   const [item, setItem] = useState();
 
   useEffect(async () => {
-    await getProject(serviceID, setItem);
+    await getProject(projectId, setItem);
   }, []);
 
   React.useEffect(() => {});

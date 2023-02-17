@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
   const { t } = useTranslation();
-
+console.log(item)
   return (
     <div
       style={{
@@ -16,7 +16,7 @@ const Item = ({ item }) => {
       <img
         className="slider-blurred"
         style={{ position: "absolute" }}
-        src={`http://localhost:3000/uploads/${item.paths[0]}`}
+        src={`http://localhost:3000/uploads/${item.paths[0].image_path}`}
         width="100%"
         height="600px"
       />
@@ -25,7 +25,7 @@ const Item = ({ item }) => {
         style={{
           position: "absolute",
         }}
-        src={`http://localhost:3000/uploads/${item.paths[0]}`}
+        src={`http://localhost:3000/uploads/${item.paths[0].image_path}`}
       />
 
       <div style={{ zIndex: 3 }} className="container">
@@ -34,7 +34,7 @@ const Item = ({ item }) => {
             <h2>{t(item.projectname)}</h2>
 
             <Link
-              to={`${process.env.PUBLIC_URL + `/projects/$}?id=${item.pid}`}`}
+              to={`${process.env.PUBLIC_URL + `/projects/${item.pid}`}`}
               className="btn btn-brand"
             >
               {t("learn_more")}

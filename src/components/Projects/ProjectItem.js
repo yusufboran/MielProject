@@ -2,15 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function ProjectItem(props) {
-  const projectUrl = `/projects/${props.title
-    .split(" ")
-    .join("-")
-    .toLowerCase()}?id=${props.id}`;
+  const projectUrl = `/projects/${props.id}`;
   return (
     <div className="col-sm-6 col-lg-4">
       <div className="service-item">
         <figure className="service-thumb">
-          <Link to={`${process.env.PUBLIC_URL + projectUrl}`}>
+          <Link to={`${process.env.PUBLIC_URL + `/projects/${props.id}`}`}>
             <img
               src={`http://localhost:3000/uploads/${props.thumb}`}
               alt={props.title}
