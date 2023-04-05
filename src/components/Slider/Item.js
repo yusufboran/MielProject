@@ -1,7 +1,7 @@
 import React from "react";
 
 const Item = (image) => {
-  console.log(image);
+  console.log();
   return (
     <div>
       {image ? (
@@ -15,7 +15,7 @@ const Item = (image) => {
           <img
             className="slider-blurred"
             style={{ position: "absolute" }}
-            src={`http://localhost:3000/uploads/${image.item.image_path}`}
+            src={`http://mielproje.com.tr//api/upload/${image.item.path}`}
             width="100%"
             height="600px"
           />
@@ -24,7 +24,7 @@ const Item = (image) => {
             style={{
               position: "absolute",
             }}
-            src={`http://localhost:3000/uploads/${image.item.image_path}`}
+            src={`http://mielproje.com.tr//api/upload/${image.item.path}`}
           />
 
           <div style={{ zIndex: 3 }} className="container"></div>

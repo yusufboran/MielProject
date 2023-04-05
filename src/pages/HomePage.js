@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
 import About from "../components/About/component";
@@ -9,13 +9,27 @@ import CallToAction from "../components/CallToAction";
 import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
 import { ProjectContext } from "../App";
-
+import i18next from "i18next";
+import { getPage } from "../db";
 const HomePage = () => {
   React.useEffect(() => {
     document.title = `Welcome`;
   }, []);
 
   const projects = useContext(ProjectContext);
+
+  var [header, setHeader] = useState("");
+  var [content, setContent] = useState("");
+
+  var headerContext =
+    i18next.language == "tr" ? header.context_tr : header.context_en;
+  var aboutContext =
+    i18next.language == "tr" ? content.context_tr : content.context_en;
+
+  React.useEffect(() => {
+    getPage(setHeader, setContent);
+    document.title = `About`;
+  }, []);
 
   return (
     <Fragment>
@@ -24,9 +38,10 @@ const HomePage = () => {
       <Slider images={projects} page="home" />
       <About
         disable={true}
-        imgUrl="https://plus.unsplash.com/premium_photo-1661962705507-2c4e47d37282?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80"
-        content="about_context"
+        imgUrl={content.image_path}
+        content={aboutContext}
       />
+
       <Features classes="sp-top" />
       <Funfact />
       <CallToAction />

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import React  from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser";
 import Thumbnail from "../UI/Thumbnail";
@@ -7,13 +7,15 @@ import Content from "../UI/Content";
 
 const About = ({ content, imgUrl, disable }) => {
   const { t } = useTranslation();
-
   return (
     <div className="about-area-wrapper sm-top">
       <div className="container">
         <div className="row align-items-lg-center">
           <div className="col-md-6 col-lg-5">
-            <Thumbnail classes="about-thumb" imgSrc={imgUrl} />
+            <Thumbnail
+              classes="about-thumb"
+              imgSrc={`https://mielproje.com.tr/api/upload/${imgUrl}`}
+            />
           </div>
 
           <div className="col-md-6 col-lg-7">

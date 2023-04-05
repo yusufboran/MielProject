@@ -20,6 +20,7 @@ const App = () => {
   React.useEffect(() => {
     getProjectsList(setItems);
     i18next.changeLanguage("tr");
+ 
   }, []);
 
   return (

@@ -7,7 +7,7 @@ const PageHeader = ({ bgImg, content }) => {
   return (
     <div
       className="page-header-area bg-img"
-      style={{ backgroundImage: `url(${bgImg})` }}
+      style={{ backgroundImage: `url(https://mielproje.com.tr/api/upload/${bgImg})` }}
     >
       <div className="container">
         <div className="row">

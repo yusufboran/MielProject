@@ -30,18 +30,22 @@ function Services() {
       <div className="service-content-area">
         <div className="container">
           <div className="row mtn-30">
+
             {projects &&
-              projects.map((project) => {
+              projects.map((project,index) => {
                 const randomFile = Math.floor(
                   Math.random() * project.paths.length
                 );
+
+                console.log(project.paths)
                 return (
                   <ProjectItem
-                    key={1}
+                    key={index}
+                    project={project}
                     id={project.pid}
                     title={project.projectname}
                     features={project.features}
-                    thumb={project.paths[randomFile].image_path}
+                    thumb={project.paths}
                     promotional_text={"project.promotional_text"}
                   />
                 );

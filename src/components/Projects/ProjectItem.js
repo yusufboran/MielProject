@@ -1,29 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ProjectItem(props) {
-  const projectUrl = `/projects/${props.id}`;
+function ProjectItem({ project }) {
+  const projectUrl = `/projects/${project.id}`;
   return (
     <div className="col-sm-6 col-lg-4">
       <div className="service-item">
         <figure className="service-thumb">
-          <Link to={`${process.env.PUBLIC_URL + `/projects/${props.id}`}`}>
+          <Link to={`${process.env.PUBLIC_URL + `/projects/${project.id}`}`}>
             <img
-              src={`http://localhost:3000/uploads/${props.thumb}`}
-              alt={props.title}
+              src={`https://mielproje.com.tr/api/upload/${project.paths[0].path}`}
+              alt={project.title}
             />
           </Link>
-
           <figcaption className="service-txt">
-            <h5>{props.title}</h5>
+            <h5>{project.title}</h5>
           </figcaption>
         </figure>
         <div className="service-content">
           <div className="service-content-inner">
             <ul>
-              {props.features && (
+              {project.features && (
                 <li>
-                  {props.features.map((text) => (
+                  {project.features.map((text) => (
                     <li>{text}</li>
                   ))}
                 </li>

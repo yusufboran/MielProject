@@ -7,34 +7,34 @@ import { getProject } from "../../db";
 import i18next from "i18next";
 
 const ServiceDetails = () => {
-  var url = window.location.href.split("/");
-  var projectId = url[url.length - 1];
-
+  var projectId = window.location.href.split("/").pop();
   const [item, setItem] = useState();
+  const [project, setProject] = useState();
 
   useEffect(async () => {
-    await getProject(projectId, setItem);
+    await getProject(projectId, setProject);
   }, []);
 
   React.useEffect(() => {});
 
   return (
     <Fragment>
-      {item && (
+      {project && console.log(project[0])}
+      {project && (
         <>
-          <Slider images={item.paths} />
+           <Slider images={project[0].paths} />
           <PageWrapper classes="sm-top service-details-wrapper">
             <ServiceContentWrap
               // url={item.presentation.url}
               description={
                 i18next.language == "en"
-                  ? item.descriptionen
-                  : item.descriptiontr
+                  ? project[0].descriptionen
+                  : project[0].descriptionen
               }
             />
           </PageWrapper>
 
-          <RelatedServices />
+          {/* <RelatedServices /> */}
         </>
       )}
     </Fragment>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   withScriptjs,
   withGoogleMap,
@@ -9,6 +10,7 @@ import {
 import { getLocationsList } from "../../db";
 import mapStyles from "./mapStyles";
 import parse from "html-react-parser";
+import pin from "../../assets/img/pin.png";
 
 const mapOptions = {
   fullscreenControl: false,
@@ -23,8 +25,7 @@ function Map() {
   const [items, setItems] = React.useState([]);
 
   useEffect(() => {
-    getLocationsList(setItems)
-   
+    getLocationsList(setItems);
   }, []);
 
   const handleActiveMarker = (marker) => {
@@ -59,13 +60,13 @@ function Map() {
         <Marker
           key={item.id}
           position={{
-            lat: item.location[0],
-            lng: item.location[1],
+            lat: Number(item["location"].slice(1, -1).split(",")[0]),
+            lng: Number(item["location"].slice(1, -1).split(",")[1]),
           }}
           onMouseOver={() => handleActiveMarker(item.id)}
           onClick={() => handleActiveMarker(item.id)}
           icon={{
-            url: "https://cdn-icons-png.flaticon.com/512/1550/1550590.png",
+            url: pin,
             scaledSize: new window.google.maps.Size(60, 60),
           }}
         >
