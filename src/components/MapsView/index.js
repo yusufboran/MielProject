@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import {
   withScriptjs,
   withGoogleMap,
@@ -10,13 +9,14 @@ import {
 import { getLocationsList } from "../../db";
 import mapStyles from "./mapStyles";
 import parse from "html-react-parser";
-import pin from "../../assets/img/pin.png";
+import pin from "../../assets/img/pin.svg";
 
 const mapOptions = {
   fullscreenControl: false,
   mapTypeControl: false,
   styles: mapStyles,
   maxZoom: 16,
+  minZoom: 5,
   streetViewControl: false,
 };
 
