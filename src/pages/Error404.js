@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 const Error404 = () => {
   React.useEffect(() => {
     document.title = `Error 404`;
-  });
+  },[]);
 
   const { t } = useTranslation();
   return (

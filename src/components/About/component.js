@@ -6,6 +6,7 @@ import Thumbnail from "../UI/Thumbnail";
 import Content from "../UI/Content";
 
 const About = ({ content, imgUrl, disable }) => {
+  console.log(content);
   const { t } = useTranslation();
   return (
     <div className="about-area-wrapper sm-top">

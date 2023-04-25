@@ -5,24 +5,28 @@ import RelatedServices from "../../components/RelatedServices";
 import Slider from "../Slider";
 import { getProject } from "../../db";
 import i18next from "i18next";
-
+import { useTranslation } from "react-i18next";
 const ServiceDetails = () => {
   var projectId = window.location.href.split("/").pop();
-  const [item, setItem] = useState();
   const [project, setProject] = useState();
+
+  const { t } = useTranslation();
 
   useEffect(async () => {
     await getProject(projectId, setProject);
   }, []);
 
-  React.useEffect(() => {});
+  React.useEffect(() => {
+    console.log("dil değişti...");
+  }, [t]);
 
   return (
     <Fragment>
-      {project && console.log(project[0])}
       {project && (
         <>
-           <Slider images={project[0].paths} />
+          {project.projectname}
+          <Slider images={project[0].paths} />
+
           <PageWrapper classes="sm-top service-details-wrapper">
             <ServiceContentWrap
               // url={item.presentation.url}
@@ -32,6 +36,17 @@ const ServiceDetails = () => {
                   : project[0].descriptionen
               }
             />
+            {/* <embed
+              src={`${url}${pdfStyle}`}
+              type="application/pdf"
+              width="90%"
+              height="500px"
+              style={{
+                border: "0px solid",
+                marginLeft: "5%",
+                marginRight: "5%",
+              }}
+            /> */}
           </PageWrapper>
 
           {/* <RelatedServices /> */}

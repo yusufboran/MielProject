@@ -11,10 +11,15 @@ import MobileMenu from "../components/MobileMenu";
 import { ProjectContext } from "../App";
 import i18next from "i18next";
 import { getPage } from "../db";
+import { useTranslation } from "react-i18next";
+
 const HomePage = () => {
   React.useEffect(() => {
     document.title = `Welcome`;
   }, []);
+
+
+  const { t } = useTranslation();
 
   const projects = useContext(ProjectContext);
 
@@ -30,6 +35,10 @@ const HomePage = () => {
     getPage(setHeader, setContent);
     document.title = `About`;
   }, []);
+
+  React.useEffect(() => {
+    console.log("dil değişti...");
+  }, [t]);
 
   return (
     <Fragment>

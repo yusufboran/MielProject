@@ -9,7 +9,7 @@ import Projects from "../components/Projects";
 const ProjectsPage = () => {
   React.useEffect(() => {
     document.title = `Projects`;
-  });
+  },[]);
 
   return (
     <Fragment>

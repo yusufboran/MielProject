@@ -7,7 +7,7 @@ import MapView from "../components/MapsView";
 const OfficesPage = () => {
   React.useEffect(() => {
     document.title = `Offices`;
-  });
+  },[]);
 
   return (
     <Fragment>

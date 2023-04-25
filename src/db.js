@@ -26,7 +26,9 @@ export const getProject = async (id, setItem) => {
 export const addMessage = async (item) => {
   try {
     var path = `https://mielproje.com.tr/api/contact.php`;
-    axios.post(path, item);
+    axios.post(path, item).then((response) => {
+      console.log(response.data);
+    });
   } catch (error) {
     toast.error("addMessage", error.message);
   }
@@ -69,6 +71,7 @@ export const getLocationsList = async (setItems) => {
 export const getPage = async (setHeader, setContent) => {
   try {
     axios.get(`https://mielproje.com.tr/api/about.php/`).then((response) => {
+      console.log( response.data)
       setHeader(response.data.find((item) => item.title === "header"));
       setContent(response.data.find((item) => item.title === "content"));
     });

@@ -7,7 +7,7 @@ import MobileMenu from "../components/MobileMenu";
 const PageContact = () => {
   React.useEffect(() => {
     document.title = `Contact`;
-  });
+  },[]);
 
   return (
     <Fragment>

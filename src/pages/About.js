@@ -7,20 +7,25 @@ import Footer from "../components/Footer/footer";
 import MobileMenu from "../components/MobileMenu";
 import { getPage } from "../db";
 import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 
 const PageAbout = () => {
+  const { t } = useTranslation();
+
   var [header, setHeader] = useState("");
   var [content, setContent] = useState("");
-
   var headerContext =
     i18next.language == "tr" ? header.context_tr : header.context_en;
   var aboutContext =
     i18next.language == "tr" ? content.context_tr : content.context_en;
-
   React.useEffect(() => {
     getPage(setHeader, setContent);
     document.title = `About`;
   }, []);
+
+  React.useEffect(() => {
+    console.log("dil değişti...");
+  }, [t]);
 
   return (
     <Fragment>

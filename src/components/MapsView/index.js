@@ -86,14 +86,17 @@ function Map() {
                 <div className="team-mem-item">
                   <figure className="member-pic">
                     <img
-                      src={item.imgUrl}
-                      alt="Girl in a jacket"
-                      width="500"
-                      height="600"
+                      src={item.image}
+                      alt="image"
+                      style={{
+                        objectFit: "contain",
+                        width: "400px",
+                        height: "500px",
+                      }}
                     />
                   </figure>
                   <div className="member-info">
-                    <h5>{item.title}</h5>
+                    <h5>{item.name}</h5>
                     <p>
                       <a href={"tel:" + item.phone}> {item.phone}</a>
                     </p>
@@ -111,7 +114,7 @@ function Map() {
 
 const MapWrapped = withScriptjs(withGoogleMap(Map));
 export default function Main() {
-  const api = "AIzaSyAi9t9QLLtA1qArKTK_mE3wSUFSYZxQiok"; //google developer api key AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA
+  const api = "AIzaSyAi9t9QLLtA1qArKTK_mE3wSUFSYZxQiok"; //google developer api key AIzaSyAzo9Xzk5QwuAixqF8Kxdxp1zgMfL2DtKA  AIzaSyAi9t9QLLtA1qArKTK_mE3wSUFSYZxQiok
   return (
     <div style={{ width: "100%", height: "88vh" }}>
       <MapWrapped
